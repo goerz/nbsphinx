@@ -1,0 +1,128 @@
+nbformat 4
+nbformat_minor 0
+markdown
+    # An Example Notebook
+    
+    This notebook is meant for testing conversion to other formats.
+    
+    It contains Markdown cells and code cells with different kinds of outputs.
+markdown
+    ## Markdown
+    
+    We can write *in italics* (same _with underscores_), **in boldface** (same __with undescores__) and ~~strikethrough~~.
+    We also can write `preformatted text`.
+    
+    Equations can be formatted really nicely, either inline, like $\text{e}^{i\pi} = -1$, or on a separate line, like
+    
+    $$
+    \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
+    $$
+    
+    We can also write code with nice syntax highlighting:
+    
+    ```python
+    print("Hello, world!")
+    ```
+markdown
+    ## Code Cells
+    
+    An empty code cell:
+code
+    
+  metadata
+    {
+     "collapsed": true
+    }
+markdown
+    A cell with no output:
+code
+    None
+  metadata
+    {
+     "collapsed": true
+    }
+markdown
+    A simple output:
+code
+    6 * 7
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    The standard output stream:
+code
+    print('Hello, world!')
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    Normal output + standard output
+code
+    print('Hello, world!')
+    6 * 7
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    The standard error stream is highlighted and displayed just below the code cell.
+    The standard output stream comes afterwards (with no special highlighting).
+    Finally, the "normal" output is displayed.
+code
+    import logging
+    logging.warning('I am a warning and I will appear on the standard error stream')
+    print('I will appear on the standard output stream')
+    'I am the "normal" output'
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    ## Special Display Formats
+    
+    TODO: pdf, svg, png, html, markdown, jpeg, plain text, latex, javascript
+    
+    TODO: Images, LaTeX equations, tables, ...
+markdown
+    ## Raw Cells
+raw
+    TODO: a meaningful example for raw cells!
+markdown
+    ## An Exception
+    
+    Finally, let's try an exception.
+    The cells below an exception are (normally) not executed.
+code
+    1 / 0
+  metadata
+    {
+     "collapsed": false
+    }
+code
+    6 * 7
+  metadata
+    {
+     "collapsed": false
+    }
+metadata
+    {
+     "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+     },
+     "language_info": {
+      "codemirror_mode": {
+       "name": "ipython",
+       "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.4.3+"
+     }
+    }
