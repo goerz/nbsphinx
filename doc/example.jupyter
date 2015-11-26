@@ -89,23 +89,6 @@ markdown
     ## Raw Cells
 raw
     TODO: a meaningful example for raw cells!
-markdown
-    ## An Exception
-    
-    Finally, let's try an exception.
-    The cells below an exception are (normally) not executed.
-code
-    1 / 0
-  metadata
-    {
-     "collapsed": false
-    }
-code
-    6 * 7
-  metadata
-    {
-     "collapsed": false
-    }
 metadata
     {
      "kernelspec": {
