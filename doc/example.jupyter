@@ -12,17 +12,39 @@ markdown
     We can write *in italics* (same _with underscores_), **in boldface** (same __with undescores__) and ~~strikethrough~~.
     We also can write `preformatted text`.
     
+    ### Equations
+    
     Equations can be formatted really nicely, either inline, like $\text{e}^{i\pi} = -1$, or on a separate line, like
     
     $$
     \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
     $$
     
+    ### Code
+    
     We can also write code with nice syntax highlighting:
     
     ```python
     print("Hello, world!")
     ```
+    
+    ### Tables
+    
+    title1 | title2
+    -------|-------
+    data1  | data2
+    data3  | data4
+    data5  | data6
+    
+    ### Images
+    
+    Jupyter notebook icon (local): ![Jupyter notebook icon](images/notebook_icon.png)
+    
+    Python logo (local): ![Python logo](images/python_logo.svg)
+    
+    Jupyter logo (remote): ![Jupyter logo (remote)](http://jupyter.org/assets/nav_logo.svg)
+    
+    Python logo (remote): ![Python logo (remote)](https://www.python.org/static/img/python-logo-large.png)
 markdown
     ## Code Cells
     
@@ -82,9 +104,100 @@ code
 markdown
     ## Special Display Formats
     
-    TODO: pdf, svg, png, html, markdown, jpeg, plain text, latex, javascript
+    See [IPython example notebook](https://nbviewer.jupyter.org/github/ipython/ipython/blob/master/examples/IPython Kernel/Rich Output.ipynb).
     
-    TODO: Images, LaTeX equations, tables, ...
+    TODO: tables? e.g. Pandas DataFrame?
+code
+    from IPython.display import display, Image, SVG, Math, YouTubeVideo
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    ### Local Image Files
+code
+    i = Image(filename='images/notebook_icon.png')
+    i
+  metadata
+    {
+     "collapsed": false
+    }
+code
+    display(i)
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    For some reason this doesn't work with `Image(...)`:
+code
+    SVG(filename='images/python_logo.svg')
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    ### Image URLs
+code
+    Image(url='https://www.python.org/static/img/python-logo-large.png')
+  metadata
+    {
+     "collapsed": false
+    }
+code
+    Image(url='https://www.python.org/static/img/python-logo-large.png', embed=True)
+  metadata
+    {
+     "collapsed": false
+    }
+code
+    Image(url='http://jupyter.org/assets/nav_logo.svg')
+  metadata
+    {
+     "collapsed": false
+    }
+code
+    Image(url='https://www.python.org/static/favicon.ico')
+  metadata
+    {
+     "collapsed": false
+    }
+code
+    Image(url='http://python.org/images/python-logo.gif')
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    ### Math
+code
+    eq = Math(r"\int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)")
+    eq
+  metadata
+    {
+     "collapsed": false
+    }
+code
+    display(eq)
+  metadata
+    {
+     "collapsed": false
+    }
+code
+    %%latex
+    \begin{equation}
+    \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
+    \end{equation}
+  metadata
+    {
+     "collapsed": false
+    }
+code
+    YouTubeVideo('iV2ViNJFZC8')
+  metadata
+    {
+     "collapsed": false
+    }
 markdown
     ## Raw Cells
 raw
