@@ -30,11 +30,12 @@ markdown
     
     ### Tables
     
-    title1 | title2
-    -------|-------
-    data1  | data2
-    data3  | data4
-    data5  | data6
+    A     | B     | A and B
+    ------|-------|--------
+    False | False | False
+    True  | False | False
+    False | True  | False
+    True  | True  | True
     
     ### Images
     
