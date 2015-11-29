@@ -202,7 +202,12 @@ code
 markdown
     ## Raw Cells
 raw
-    TODO: a meaningful example for raw cells!
+    Raw cells are interpreted as reStructuredText_ and parsed by Sphinx_.
+    
+    .. _reStructuredText: http://sphinx-doc.org/rest.html
+    .. _Sphinx: http://sphinx-doc.org/
+    
+    :doc:`Back to main page <index>`
 metadata
     {
      "kernelspec": {
