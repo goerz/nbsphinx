@@ -1,0 +1,43 @@
+nbformat 4
+nbformat_minor 0
+markdown
+    # An Orphan Notebook
+    
+    This means that is doesn't appear in the Sphinx doctree (see `index.rst`), but other pages can still link to it (with ``:doc:`notebookname` ``).
+    
+    **Note:** Orphan notebooks are not included in the PDF output!
+    
+    Sphinx raises a warning in case of orphaned documents:
+    
+        WARNING: document isn't included in any toctree
+        
+    If you want to avoid this warning, you can add this to the notebook JSON metadata:
+    
+    ```json
+    "nbsphinx": {
+      "orphan": true
+    },
+    ```
+metadata
+    {
+     "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+     },
+     "language_info": {
+      "codemirror_mode": {
+       "name": "ipython",
+       "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.4.3+"
+     },
+     "nbsphinx": {
+      "orphan": true
+     }
+    }
