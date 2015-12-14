@@ -46,6 +46,10 @@ markdown
     Jupyter logo (remote): ![Jupyter logo (remote)](http://jupyter.org/assets/nav_logo.svg)
     
     Python logo (remote): ![Python logo (remote)](https://www.python.org/static/img/python-logo-large.png)
+    
+    ### Links to Other Notebooks
+    
+    Relative links to local notebooks can be used: [a link to a notebook in a subdirectory](subdir/another.ipynb), [a link to an orphan notebook](orphan.ipynb) (latter won't work in LaTeX output, because orphan pages are not included there).
 markdown
     ## Code Cells
     

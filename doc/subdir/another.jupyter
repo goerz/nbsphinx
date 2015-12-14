@@ -11,6 +11,8 @@ code
     {
      "collapsed": false
     }
+markdown
+    A link to a notebook in the parent directory: [link](../example.ipynb)
 metadata
     {
      "kernelspec": {
