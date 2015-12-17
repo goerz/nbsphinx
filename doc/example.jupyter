@@ -211,7 +211,9 @@ raw
     .. _reStructuredText: http://sphinx-doc.org/rest.html
     .. _Sphinx: http://sphinx-doc.org/
     
-    :doc:`Back to main page <index>`
+    .. only:: html
+    
+        :doc:`Back to main page <index>`
 metadata
     {
      "kernelspec": {
@@ -229,6 +231,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.4.3+"
+      "version": "3.4.4rc1"
      }
     }
