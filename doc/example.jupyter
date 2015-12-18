@@ -9,8 +9,19 @@ markdown
 markdown
     ## Markdown
     
-    We can write *in italics* (same _with underscores_), **in boldface** (same __with undescores__) and ~~strikethrough~~.
-    We also can write `preformatted text`.
+    We can use *emphasis*, **boldface**, `preformatted text`.
+    
+    > It looks like strike-out text is not supported: ~~strikethrough~~.
+    
+    * Red
+    * Green
+    * Blue
+    
+    ***
+    
+    1. One
+    1. Two
+    1. Three
     
     ### Equations
     
