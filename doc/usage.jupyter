@@ -5,13 +5,13 @@ markdown
     
     Install `nbsphinx` with pip (not available yet!) or copy the file [nbsphinx.py](../nbsphinx.py) to the directory where you want to set up Sphinx (this is typically the directory where you have your notebook files).
     
-    In the same directory, run this command:
+    In the same directory, run this command (assuming you have [Sphinx](http://sphinx-doc.org/) installed already):
     
         sphinx-quickstart
         
     Answer the questions that appear on the screen, in case of doubt, just press the `<Return>` key to take the default values.
     
-    After that, you'll have a few brand new files in the current directory.
+    After that, there will be a few brand-new files in the current directory.
     You'll have to make a few changes to the file `conf.py`.
     Have a look at the [conf.py](conf.py) of `nbsphinx` for the details.
     
@@ -47,6 +47,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.4.3+"
+      "version": "3.4.4rc1"
      }
     }
