@@ -3,9 +3,25 @@ nbformat_minor 0
 markdown
     # An Orphan Notebook
     
-    This means that is doesn't appear in the Sphinx doctree (see `index.rst`), but other pages can still link to it (with ``:doc:`notebookname` ``).
+    This means that is doesn't appear in the Sphinx toctree (see `index.rst`), but other pages can still link to it ...
     
-    **Note:** Orphan notebooks are not included in the PDF output!
+    * ... from a Markdown cell of another notebook using
+    
+        ```
+        [some link text](notebookname.ipynb)
+        ```
+    
+    * ... from a reST page using
+    
+        ```rst
+        :doc:`notebookname`
+        ```
+        
+        or
+        
+        ```rst
+        :doc:`alternative link text <notebookname>`
+        ```    
     
     Sphinx raises a warning in case of orphaned documents:
     
@@ -18,8 +34,17 @@ markdown
       "orphan": true
     },
     ```
+    
+    **Note:** Orphan notebooks are not included in the LaTeX output!
+raw
+    :doc:`Back to main page <index>`
+  metadata
+    {
+     "raw_mimetype": "text/restructuredtext"
+    }
 metadata
     {
+     "celltoolbar": "Raw Cell Format",
      "kernelspec": {
       "display_name": "Python 3",
       "language": "python",
@@ -35,7 +60,7 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.4.3+"
+      "version": "3.4.4rc1"
      },
      "nbsphinx": {
       "orphan": true
