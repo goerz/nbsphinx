@@ -9,27 +9,34 @@ markdown
     
         sphinx-quickstart
         
-    Answer the questions that appear on the screen, in case of doubt, just press the `<Return>` key to take the default values.
+    Answer the questions that appear on the screen. In case of doubt, just press the `<Return>` key to take the default values.
     
     After that, there will be a few brand-new files in the current directory.
     You'll have to make a few changes to the file `conf.py`.
     Have a look at the [conf.py](conf.py) of `nbsphinx` for the details.
     
-    Once your `conf.py` is in place, edit the file `index.rst` and add your notebooks (without the `.ipynb` extension) to the `toctree` directive.
+    Once your `conf.py` is in place, edit the file `index.rst` and add the file names of your notebooks (without the `.ipynb` extension) to the `toctree` directive.
     
     To create the HTML pages, use this command:
     
         sphinx-build <source-dir> <build-dir>
         
-    For example, if your source files are in the current directory, you can run this:
+    If you have many notebooks, you can do a parallel build by using the `-j` option:
     
-        sphinx-build . _build
+        sphinx-build <source-dir> <build-dir> -j<number-of-processes>
+    
+    For example, if your source files are in the current directory and you have 4 CPU cores, you can run this:
+    
+        sphinx-build . _build -j4
         
     Afterwards, you can find the main HTML file in `_build/index.html`.
     
     To create LaTeX output, use:
     
         sphinx-build <source-dir> <build-dir> -b latex
+        
+    Subsequent builds will be faster, because only those source files which have changed will be re-built.
+    To force re-building all source files, use the `-E` option.
 metadata
     {
      "kernelspec": {
