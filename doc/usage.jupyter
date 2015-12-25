@@ -37,6 +37,22 @@ markdown
         
     Subsequent builds will be faster, because only those source files which have changed will be re-built.
     To force re-building all source files, use the `-E` option.
+markdown
+    ## HTML Themes
+    
+    The `nbsphinx` extension does *not* provide its own theme, you can use any of the available themes or create a custom one, if you feel like it.
+    
+    Here are a few examples how the `nbsphinx` input and output cells look like in different themes:
+    
+    http://nbsphinx.readthedocs.org/en/readthedocs-theme/
+    
+    http://nbsphinx.readthedocs.org/en/alabaster-theme/
+    
+    http://nbsphinx.readthedocs.org/en/bootstrap-theme/
+    
+    http://nbsphinx.readthedocs.org/en/cloud-theme/
+    
+    http://nbsphinx.readthedocs.org/en/py3doc-enhanced-theme/
 metadata
     {
      "kernelspec": {
