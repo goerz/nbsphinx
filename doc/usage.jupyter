@@ -3,7 +3,11 @@ nbformat_minor 0
 markdown
     # Usage
     
-    Install `nbsphinx` with pip (not available yet!) or copy the file [nbsphinx.py](../nbsphinx.py) to the directory where you want to set up Sphinx (this is typically the directory where you have your notebook files).
+    Install `nbsphinx` with pip:
+    
+        pip install nbsphinx --user
+    
+    ... or copy the file [nbsphinx.py](../nbsphinx.py) to the directory where you want to set up Sphinx (this is typically the directory where you have your notebook files).
     
     In the same directory, run this command (assuming you have [Sphinx](http://sphinx-doc.org/) installed already):
     
