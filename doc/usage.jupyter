@@ -47,6 +47,30 @@ markdown
     Subsequent builds will be faster, because only those source files which have changed will be re-built.
     To force re-building all source files, use the `-E` option.
 markdown
+    ## Automatic Creation of HTML and PDF output on readthedocs.org
+    
+    This is very easy!
+    
+    1. Create an account on https://readthedocs.org/ and add your Github/Bitbucket repository (or any publicly available Git/Subversion/Mercurial/Bazaar repository).
+    
+    1. Create a file named `requirements.txt` (or whatever name you wish) in your repository containing the required pip packages:
+    
+            nbsphinx
+            ipykernel
+    
+    1. In the "Advanced Settings" on readthedocs.org, specify your `requirements.txt` file (or however you called it) in the box labelled "Requirements file". Kinda obvious, isn't it?
+    
+    1. Still in the "Advanced Settings", make sure the right Python interpreter is chosen.  This must be the same version (2.x or 3.x) as you were using in your notebooks!
+    
+    1. Make sure that in the "Settings" of your Github repository, under "Webhooks & services", "ReadTheDocs" is listed and activated in the "Services" section. If not, use "Add service".
+        There is probably a similar thing for Bitbucket.
+    
+    1. Done!
+    
+    After that, you only have to "push" to your repository and the HTML pages and the PDF file of your stuff are automagically created on readthedocs.org. Awesome!
+    
+    You can even have different versions of your stuff, just use Git tags and branches and select in the readthedocs.org settings (under "Admin", "Versions") which of those should be created.
+markdown
     ## HTML Themes
     
     The `nbsphinx` extension does *not* provide its own theme, you can use any of the available themes or create a custom one, if you feel like it.
