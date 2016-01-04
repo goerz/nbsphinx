@@ -7,6 +7,12 @@ markdown
     
         pip install nbsphinx --user
     
+    If you change your mind, you can un-install it with:
+    
+        pip uninstall nbsphinx
+markdown
+    ## Sphinx Setup
+    
     In the directory with your notebook files, run this command (assuming you have [Sphinx](http://sphinx-doc.org/) installed already):
     
         sphinx-quickstart
@@ -25,6 +31,8 @@ markdown
     ```
     
     Once your `conf.py` is in place, edit the file `index.rst` and add the file names of your notebooks (without the `.ipynb` extension) to the `toctree` directive.
+markdown
+    ## Running Sphinx
     
     To create the HTML pages, use this command:
     
