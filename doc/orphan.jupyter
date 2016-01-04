@@ -3,7 +3,7 @@ nbformat_minor 0
 markdown
     # An Orphan Notebook
     
-    This means that is doesn't appear in the Sphinx toctree (see `index.rst`), but other pages can still link to it ...
+    This means that is doesn't appear in the Sphinx toctree (see `doc/index.rst`), but other pages can still link to it ...
     
     * ... from a Markdown cell of another notebook using
     
@@ -14,19 +14,19 @@ markdown
     * ... from a reST page using
     
         ```rst
-        :doc:`notebookname`
+        :ref:`notebookname.ipynb`
         ```
-        
+    
         or
-        
+    
         ```rst
-        :doc:`alternative link text <notebookname>`
-        ```    
+        :ref:`alternative link text <notebookname.ipynb>`
+        ```
     
     Sphinx raises a warning in case of orphaned documents:
     
         WARNING: document isn't included in any toctree
-        
+    
     If you want to avoid this warning, you can add this to the notebook's JSON metadata:
     
     ```json
@@ -60,7 +60,7 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.4.4rc1"
+      "version": "3.4.4"
      },
      "nbsphinx": {
       "orphan": true

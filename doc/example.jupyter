@@ -79,6 +79,24 @@ markdown
     
     [mylink]: subdir/another.ipynb
     ```
+    
+    Links to sub-sections are also possible, e.g. [this subsection](subdir/another.ipynb#A-Sub-Section).
+    
+    This link was created with:
+    
+    ```
+    [this subsection](subdir/another.ipynb#A-Sub-Section)
+    ```
+    
+    You just have to remember to replace spaces with hyphens!
+    
+    BTW, links to sections of the current notebook work, too, e.g. [beginning of this section](#Links-to-Other-Notebooks).
+    
+    This can be done, as expected, like this:
+    
+    ```
+    [beginning of this section](#Links-to-Other-Notebooks)
+    ```
 markdown
     ## Code Cells
     
@@ -302,6 +320,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.4.4rc1"
+      "version": "3.4.4"
      }
     }
