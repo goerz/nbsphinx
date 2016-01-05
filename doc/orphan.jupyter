@@ -36,15 +36,10 @@ markdown
     ```
     
     **Note:** Orphan notebooks are not included in the LaTeX output!
-raw
-    :doc:`Back to main page <index>`
-  metadata
-    {
-     "raw_mimetype": "text/restructuredtext"
-    }
+    
+    [Back to main page](index.ipynb)
 metadata
     {
-     "celltoolbar": "Raw Cell Format",
      "kernelspec": {
       "display_name": "Python 3",
       "language": "python",
