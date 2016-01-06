@@ -2,6 +2,13 @@ nbformat 4
 nbformat_minor 0
 markdown
     # External Links
+markdown
+    **notebook_sphinxext.py**
+    
+    Notebooks can be included in `*.rst` files with a custom `notebook` directive.
+    Uses `runipy` to execute notebooks and `nbconvert` to convert the result to HTML.
+    
+    No LaTeX support.
     
     https://github.com/ngoldbaum/RunNotebook
     
@@ -9,31 +16,47 @@ markdown
     
     https://github.com/matthew-brett/perrin-academy/blob/master/sphinxext/notebook_sphinxext.py
     
+    https://github.com/ipython/nbconvert/pull/35
+markdown
+    **nb2plots**
+    
+    Notebook to reStructuredText converter which uses a modified version of the matplotlib `plot` directive.
+    
+    https://github.com/matthew-brett/nb2plots
+markdown
+    **brole**
+    
+    A Sphinx role for IPython notebooks
+    
+    https://github.com/matthew-brett/brole
+markdown
+    **Sphinx-Gallery**
+    
+    http://sphinx-gallery.readthedocs.org/
+markdown
+    **DocOnce**
+    
+    http://hplgit.github.io/doconce/doc/web/index.html
+markdown
+    **Converting Notebooks to reStructuredText**
+    
+    https://github.com/perrette/dimarray/blob/master/docs/scripts/nbconvert_to_rst.py
+    
+    https://gist.github.com/hadim/16e29b5848672e2e497c
+    
     http://sphinx-ipynb.readthedocs.org/
+markdown
+    **Converting Notebooks to HTML for Blog Posts**
     
     http://dongweiming.github.io/divingintoipynb_nikola/posts/nbconvert.html
+    
+    https://github.com/getpelican/pelican-plugins/blob/master/liquid_tags/notebook.py
+markdown
+    **Further Posts and Issues**
     
     https://github.com/ipython/ipython/issues/4936
     
     https://mail.scipy.org/pipermail/ipython-user/2013-December/013490.html
-    
-    https://github.com/ipython/nbconvert/pull/35
-    
-    https://github.com/matthew-brett/brole
-    
-    https://github.com/perrette/dimarray/blob/master/docs/scripts/nbconvert_to_rst.py
-    
-    https://github.com/matthew-brett/nb2plots
-    
-    https://github.com/getpelican/pelican-plugins/blob/master/liquid_tags/notebook.py
-    
-    https://github.com/jupyter/nbconvert/issues/47
-    
-    http://hplgit.github.io/doconce/doc/web/index.html
-    
-    http://sphinx-doc.org/extdev/
-    
-    https://github.com/sphinx-doc/sphinx/issues/1907
 metadata
     {
      "kernelspec": {
