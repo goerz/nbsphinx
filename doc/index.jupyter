@@ -13,7 +13,9 @@ markdown
     These contents are **not** automatically synchronized with `index.rst`, therefore one or the other will likely be out-of-date!
     
     * [Usage](usage.ipynb)
-    * [An Example Notebook](example.ipynb)
+    * [Markdown Cells](markdown-cells.ipynb)
+    * [Code Cells](code-cells.ipynb)
+    * [Raw Cells](raw-cells.ipynb)
     * [A Pre-Executed Notebook](pre-executed.ipynb)
     * [Ignoring Errors](allow-errors.ipynb)
     * [Hidden Cells](hidden-cells.ipynb)

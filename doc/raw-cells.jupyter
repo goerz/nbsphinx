@@ -1,0 +1,75 @@
+nbformat 4
+nbformat_minor 0
+markdown
+    # Raw Cells
+    
+    Cells with the cell type "Raw NBConvert" can have different formats.
+    This information is stored in the notebook metadata.
+    To select the format from within Jupyter, switch the cell toolbar to "Raw Cell Format".
+raw
+    By default (if no cell format is selected), the cell content is included (without any conversion) in both the HTML and LaTeX output.
+    This is typically not useful at all.
+raw
+    Raw cells in "reST" format are interpreted as reStructuredText_ and parsed by Sphinx_.
+    The result is visible in both HTML and LaTeX output.
+    This way, links from Jupyter notebooks to reST pages are possible, e.g. :doc:`rst`.
+    
+    .. _reStructuredText: http://sphinx-doc.org/rest.html
+    .. _Sphinx: http://sphinx-doc.org/
+  metadata
+    {
+     "raw_mimetype": "text/restructuredtext"
+    }
+raw
+    Raw cells in "Markdown" format are interpreted as [Markdown](https://daringfireball.net/projects/markdown/) and the result is included in both HTML and LaTeX output.
+    Since the Jupyter Notebook also supports "normal" Markdown cells, this might not be useful *at all*.
+  metadata
+    {
+     "raw_mimetype": "text/markdown"
+    }
+raw
+    <p>Raw cells in &ldquo;HTML&rdquo; format are only included in HTML output (without any conversion).
+    This might not be <em>very useful</em>, since raw HTML code is also allowed within &ldquo;normal&rdquo; Markdown cells.</p>
+    <p>Raw cells in &ldquo;LaTeX&rdquo; format are only included in LaTeX output.</p>
+  metadata
+    {
+     "raw_mimetype": "text/html"
+    }
+raw
+    Raw cells in ``LaTeX'' format are only included in \LaTeX\ output (without any conversion).
+    
+    Raw cells in ``HTML'' format are only included in HTML output.
+    This might not be \emph{very useful}, since raw HTML code is also allowed within ``normal'' Markdown cells.
+  metadata
+    {
+     "raw_mimetype": "text/latex"
+    }
+markdown
+    Raw cells in "Python" format are not shown at all (nor acted upon in any way).
+raw
+    print("I'm a raw Python cell!")
+  metadata
+    {
+     "raw_mimetype": "text/x-python"
+    }
+metadata
+    {
+     "celltoolbar": "Raw Cell Format",
+     "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+     },
+     "language_info": {
+      "codemirror_mode": {
+       "name": "ipython",
+       "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.4.4"
+     }
+    }
