@@ -12,11 +12,13 @@ code
      "collapsed": false
     }
 markdown
-    A link to a notebook in the parent directory: [link](../example.ipynb)
+    A link to a notebook in the parent directory: [link](../markdown-cells.ipynb).
+    
+    A link to a local file: [link](../images/notebook_icon.png).
     
     ## A Sub-Section
     
-    This is for testing inter-notebook links, see [this section](../example.ipynb#Links-to-Other-Notebooks).
+    This is for testing inter-notebook links, see [this section](../markdown-cells.ipynb#Links-to-Other-Notebooks).
 metadata
     {
      "kernelspec": {

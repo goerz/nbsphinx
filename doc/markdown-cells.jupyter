@@ -91,6 +91,18 @@ markdown
     ```
     [beginning of this section](#Links-to-Other-Notebooks)
     ```
+markdown
+    ## Links to Local Files
+    
+    Links to local files (other than Jupyter notebooks) are also possible, e.g. [requirements.txt](requirements.txt).
+    
+    This was simply created with:
+    
+    ```
+    [requirements.txt](requirements.txt)
+    ```
+    
+    The linked files are automatically copied to the HTML output directory.
 metadata
     {
      "celltoolbar": "Raw Cell Format",
