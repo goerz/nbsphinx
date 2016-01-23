@@ -48,10 +48,11 @@ markdown
     The standard output stream comes afterwards (with no special highlighting).
     Finally, the "normal" output is displayed.
 code
-    import logging
-    logging.warning('I am a warning and I will appear on the standard error stream')
-    print('I will appear on the standard output stream')
-    'I am the "normal" output'
+    import sys
+    
+    print("I'll appear on the standard error stream", file=sys.stderr, flush=True)
+    print("I'll appear on the standard output stream")
+    "I'm the 'normal' output"
   metadata
     {
      "collapsed": false
