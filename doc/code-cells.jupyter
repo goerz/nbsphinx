@@ -58,21 +58,6 @@ code
      "collapsed": false
     }
 markdown
-    ## ANSI Colors
-    
-    The standard output and standard error streams may contain [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code) to change the text and background colors.
-code
-    print('BEWARE: \x1b[1;33;41mugly colors\x1b[0m!', file=sys.stderr, flush=True)
-    for bg in range(40, 48):
-        for fg in range(30, 38):
-            print('\x1b[{fg};{bg}mX\x1b[0m'.format(**locals()), end='')
-            print('\x1b[1;{fg};{bg}mX\x1b[0m'.format(**locals()), end='')
-        print()
-  metadata
-    {
-     "collapsed": false
-    }
-markdown
     ## Special Display Formats
     
     See [IPython example notebook](https://nbviewer.jupyter.org/github/ipython/ipython/blob/master/examples/IPython Kernel/Rich Output.ipynb).
@@ -163,15 +148,80 @@ code
     {
      "collapsed": false
     }
+markdown
+    ### YouTube Videos
 code
     YouTubeVideo('iV2ViNJFZC8')
   metadata
     {
      "collapsed": false
     }
+markdown
+    ## ANSI Colors
+    
+    The standard output and standard error streams may contain [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code) to change the text and background colors.
+code
+    print('BEWARE: \x1b[1;33;41mugly colors\x1b[m!', file=sys.stderr, flush=True)
+    print('ABC\x1b[43mDEF\x1b[35mGHI\x1b[1mJKL\x1b[49mMNO\x1b[39mPQR\x1b[22mSTU')
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    The following code showing the 8 basic ANSI colors is based on http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html.
+    Note that Jupyter does not switch to a brighter color for bold text.
+code
+    text = ' XYZ '
+    formatstring = '\x1b[{}m' + text + '\x1b[m'
+    
+    print(' ' * 6 + ' ' * len(text) +
+          ''.join('{:^{}}'.format(bg, len(text)) for bg in range(40, 48)))
+    for fg in range(30, 38):
+        for bold in False, True:
+            fg_code = ('1;' if bold else '') + str(fg)
+            print(' {:>4} '.format(fg_code) + formatstring.format(fg_code) +
+                  ''.join(formatstring.format(fg_code + ';' + str(bg))
+                          for bg in range(40, 48)))
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    ANSI also supports a set of 256 indexed colors.
+    The following code showing all of them is based on http://bitmote.com/index.php?post/2012/11/19/Using-ANSI-Color-Codes-to-Colorize-Your-Bash-Prompt-on-Linux.
+code
+    formatstring = '\x1b[38;5;{0};48;5;{0}mX\x1b[1mX\x1b[m'
+    
+    print('  + ' + ''.join('{:2}'.format(i) for i in range(36)))
+    print('  0 ' + ''.join(formatstring.format(i) for i in range(16)))
+    for i in range(7):
+        i = i * 36 + 16
+        print('{:3} '.format(i) + ''.join(formatstring.format(i + j)
+                                          for j in range(36) if i + j < 256))
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
+    You can even use 24-bit RGB colors:
+code
+    start = 255, 0, 0
+    end = 0, 0, 255
+    length = 79
+    out = []
+    
+    for i in range(length):
+        rgb = [start[c] + int(i * (end[c] - start[c]) / length) for c in range(3)]
+        out.append('\x1b['
+                   '38;2;{rgb[2]};{rgb[1]};{rgb[0]};'
+                   '48;2;{rgb[0]};{rgb[1]};{rgb[2]}mX\x1b[m'.format(rgb=rgb))
+    print(''.join(out))
+  metadata
+    {
+     "collapsed": false
+    }
 metadata
     {
-     "celltoolbar": "Raw Cell Format",
      "kernelspec": {
       "display_name": "Python 3",
       "language": "python",
