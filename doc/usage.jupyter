@@ -1,6 +1,12 @@
 nbformat 4
 nbformat_minor 0
 markdown
+    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
+  metadata
+    {
+     "nbsphinx": "hidden"
+    }
+markdown
     # Usage
     
     Install `nbsphinx` with [pip](https://pip.pypa.io/en/latest/installing/):

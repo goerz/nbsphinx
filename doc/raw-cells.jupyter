@@ -1,6 +1,12 @@
 nbformat 4
 nbformat_minor 0
 markdown
+    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
+  metadata
+    {
+     "nbsphinx": "hidden"
+    }
+markdown
     # Raw Cells
     
     The "Raw NBConvert" cell type can be used to render different code formats into HTML or LaTeX by Sphinx.  This information is stored in the notebook metadata and converted appropriately.  To select a desired format from within Jupyter, select the cell containing your special code and choose options from the following dropdown menus:  

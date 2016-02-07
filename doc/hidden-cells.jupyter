@@ -1,6 +1,12 @@
 nbformat 4
 nbformat_minor 0
 markdown
+    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
+  metadata
+    {
+     "nbsphinx": "hidden"
+    }
+markdown
     # Hidden Cells
     
     You can remove cells from the HTML/LaTeX output by adding this to the cell metadata:
