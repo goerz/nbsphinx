@@ -98,9 +98,21 @@ markdown
     [beginning of this section](#Links-to-Other-Notebooks)
     ```
 markdown
-    ## Links to Local Files
+    ## Links to `*.rst` Files (and Other Sphinx Source Files)
     
-    Links to local files (other than Jupyter notebooks) are also possible, e.g. [requirements.txt](requirements.txt).
+    Links to files whose extension is in the configuration value [source_suffix](http://www.sphinx-doc.org/config.html#confval-source_suffix), will be converted to links to the generated HTML/LaTeX pages. Example: [A reStructuredText file](rst.rst).
+    
+    This was created with:
+    
+    ```
+    [A reStructuredText file](rst.rst)
+    ```
+    
+    Links to sub-sections are not (yet?) possible.
+markdown
+    ## Links to Local Files (HTML only)
+    
+    Links to local files (other than Jupyter notebooks and other Sphinx source files) are also possible, e.g. [requirements.txt](requirements.txt).
     
     This was simply created with:
     
@@ -109,6 +121,7 @@ markdown
     ```
     
     The linked files are automatically copied to the HTML output directory.
+    For LaTeX output, no link is created.
 metadata
     {
      "celltoolbar": "Raw Cell Format",
@@ -127,6 +140,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.4.4"
+      "version": "3.5.1+"
      }
     }
