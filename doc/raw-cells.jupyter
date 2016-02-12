@@ -14,23 +14,24 @@ markdown
     1. Select "Raw NBConvert"
     2. Switch the Cell Toolbar to "Raw Cell Format"
     3. Chose the appropriate "Raw NBConvert Format" within the cell
-markdown
+    
     ![Steps for converting cells to Raw formats in Jupyter](images/raw_cells.png)
-markdown
+    <!-- this comment makes pandoc create an in-line image -->
+    
     The following examples are different Jupyter cell formats that are rendered by Sphinx.
 markdown
     ## None
-markdown
+    
     By default (if no cell format is selected), the cell content is included (without any conversion) in both the HTML and LaTeX output.
     This is typically not useful at all.
 raw
-    "I'm a None cell"
+    "I'm a raw cell with no format."
 markdown
     ## reST
-markdown
+    
     Raw cells in "reST" format are interpreted as reStructuredText and parsed by Sphinx. The result is visible in both HTML and LaTeX output. 
 raw
-    "**I'm** a reST_ *cell*."
+    "**I'm** a *raw cell* in reST_ format."
     
     .. _reST: http://sphinx-doc.org/rest.html
   metadata
@@ -38,53 +39,42 @@ raw
      "raw_mimetype": "text/restructuredtext"
     }
 markdown
-    In addition, a raw cell formatted in reST can link to normal .rst files using 
-    
-        :doc:`rst_filename`  
-    
-    The latter code will render as a link to the appropriate .rst file.  See the following link for more information on linking between files.
-raw
-    "I'm a notebook cell with a link to a .rst file called :doc:`rst`."
-  metadata
-    {
-     "raw_mimetype": "text/restructuredtext"
-    }
-markdown
     ## Markdown
-markdown
+    
     Raw cells in "Markdown" format are interpreted as Markdown, and the result is included in both HTML and LaTeX output.  Since the Jupyter Notebook also supports normal Markdown cells, this might not be useful *at all*.
 raw
-    "**I'm** a [Markdown](https://daringfireball.net/projects/markdown/) *cell*."
+    "**I'm** a *raw cell* in [Markdown](https://daringfireball.net/projects/markdown/) format."
   metadata
     {
      "raw_mimetype": "text/markdown"
     }
 markdown
     ## HTML
-markdown
+    
     Raw cells in "HTML" format are only visible in HTML output. This option might not be very useful, since raw HTML code is also allowed within normal Markdown cells.
 raw
-    <p>&ldquo;<b>I&rsquo;m</b> an <a href="http://www.w3schools.com/tags/default.asp">HTML</a> <em>cell</em>.&rdquo;</p>
+    <p>&ldquo;<b>I&rsquo;m</b> a <em>raw cell</em> in
+    <a href="https://www.w3.org/html/">HTML</a> format.&rdquo;</p>
   metadata
     {
      "raw_mimetype": "text/html"
     }
 markdown
     ## Latex
-markdown
+    
     Raw cells in "LaTeX" format are only visible in LaTeX output.
 raw
-    \textbf{I'm} a \href{https://www.latex-project.org/}{\LaTeX} \textit{cell}.
+    \textbf{I'm} a \emph{raw cell} \href{https://www.latex-project.org/}{\LaTeX} format.
   metadata
     {
      "raw_mimetype": "text/latex"
     }
 markdown
     ## Python
-markdown
+    
     Raw cells in "Python" format are not visible at all (nor executed in any way).
 raw
-    print("I'm a raw Python cell!")
+    print("I'm a raw cell in \"Python\" format!")
   metadata
     {
      "raw_mimetype": "text/x-python"
@@ -107,6 +97,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.3.5"
+      "version": "3.5.1+"
      }
     }
