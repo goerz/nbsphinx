@@ -60,7 +60,7 @@ raw
      "raw_mimetype": "text/html"
     }
 markdown
-    ## Latex
+    ## LaTeX
     
     Raw cells in "LaTeX" format are only visible in LaTeX output.
 raw
