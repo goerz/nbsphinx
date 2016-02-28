@@ -61,6 +61,22 @@ markdown
     Subsequent builds will be faster, because only those source files which have changed will be re-built.
     To force re-building all source files, use the `-E` option.
 markdown
+    ## Watching for Changes with `sphinx-autobuild`
+    
+    If you think it's tedious to run the command `sphinx-build` again and again when you make changes to your notebooks, you'll be happy to hear that there is a way to avoid that: [sphinx-autobuild](https://pypi.python.org/pypi/sphinx-autobuild)!
+    
+    It can be installed with
+    
+        pip install sphinx-autobuild --user
+        
+    You can start auto-building your files with
+    
+        sphinx-autobuild <source-dir> <build-dir>
+    
+    This will start a local webserver which will serve the generated HTML pages at http://127.0.0.1:8000/.
+    And whenever you save changes in one of your notebooks, the appropriate HTML page(s) will be re-built and when finished, your browser view will be refreshed automatically.
+    Neat!
+markdown
     ## Automatic Creation of HTML and PDF output on readthedocs.org
     
     This is very easy!
