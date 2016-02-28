@@ -54,12 +54,14 @@ markdown
         
     Afterwards, you can find the main HTML file in `_build/index.html`.
     
+    Subsequent builds will be faster, because only those source files which have changed will be re-built.
+    To force re-building all source files, use the `-E` option.
+    
     To create LaTeX output, use:
     
         sphinx-build <source-dir> <build-dir> -b latex
-        
-    Subsequent builds will be faster, because only those source files which have changed will be re-built.
-    To force re-building all source files, use the `-E` option.
+    
+    If you don't know how to create a PDF file from the LaTeX output, you should have a look at [Latexmk](http://users.phys.psu.edu/~collins/software/latexmk-jcc/) (see also [this tutorial](http://mg.readthedocs.org/latexmk.html)).
 markdown
     ## Watching for Changes with `sphinx-autobuild`
     
@@ -74,8 +76,20 @@ markdown
         sphinx-autobuild <source-dir> <build-dir>
     
     This will start a local webserver which will serve the generated HTML pages at http://127.0.0.1:8000/.
-    And whenever you save changes in one of your notebooks, the appropriate HTML page(s) will be re-built and when finished, your browser view will be refreshed automatically.
+    Whenever you save changes in one of your notebooks, the appropriate HTML page(s) will be re-built and when finished, your browser view will be refreshed automatically.
     Neat!
+    
+    You can also abuse this to auto-build the LaTeX output:
+    
+        sphinx-autobuild <source-dir> <build-dir> -b latex
+    
+    However, to auto-build the final PDF file, you'll need an additional tool.
+    Again, you can use `latexmk` for this (see [above](#Running-Sphinx)).
+    Change to the build directory and run
+    
+        latexmk -pdf -pvc
+    
+    If your PDF viewer isn't opened because of LaTeX build errors, you can use the option `-f` to *force* creating a PDF file.
 markdown
     ## Automatic Creation of HTML and PDF output on readthedocs.org
     
