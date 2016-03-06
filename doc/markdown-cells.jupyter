@@ -35,7 +35,7 @@ markdown
     
     We can also write code with nice syntax highlighting:
     
-    ```python
+    ```python3
     print("Hello, world!")
     ```
 markdown
