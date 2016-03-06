@@ -30,6 +30,14 @@ markdown
     $$
     \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
     $$
+    
+    *Note:* Avoid leading and trailing spaces around math expressions, otherwise errors like the following will occur when Sphinx is running:
+    
+        ERROR: Unknown interpreted text role "raw-latex".
+    
+    See also the [pandoc docs](http://pandoc.org/README.html#math):
+    
+    > Anything between two `$` characters will be treated as TeX math. The opening `$` must have a non-space character immediately to its right, while the closing `$` must have a non-space character immediately to its left, and must not be followed immediately by a digit.
 markdown
     ## Code
     
