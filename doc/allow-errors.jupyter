@@ -11,17 +11,25 @@ markdown
     
     Normally, if an exception is raised while executing a notebook, the Sphinx build process is stopped immediately.
     
-    If a notebook contains errors on purpose (or if you are too lazy to fix them now), you can add this to the notebook's JSON metadata:
+    If a notebook contains errors on purpose (or if you are too lazy to fix them now), you have three options:
     
+    1. Manually execute the notebook in question and save the results, see [the pre-executed example notebook](pre-executed.ipynb#Exceptions).
+    
+    2. Allow errors in all notebooks by setting this option in [conf.py](conf.py):
+    ```
+    nbsphinx_allow_errors = True
+    ```
+    
+    3. Allow errors on a per-notebook basis by adding this to the notebook's JSON metadata:
     ```json
     "nbsphinx": {
       "allow_errors": true
     },
     ```
     
-    This very notebook is an example for this behavior.
+    This very notebook is an example for the last option.
     The results of the following code cells are not stored within the notebook, therefore it is executed during the Sphinx build process.
-    Since the above-mentioned `allow_errors` flag is set in this notebook, all cells are executed although most of them cause an exception.
+    Since the above-mentioned `allow_errors` flag is set in this notebook's metadata, all cells are executed although most of them cause an exception.
 code
     nonsense
   metadata
@@ -69,7 +77,7 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.4.4rc1"
+      "version": "3.5.1+"
      },
      "nbsphinx": {
       "allow_errors": true
