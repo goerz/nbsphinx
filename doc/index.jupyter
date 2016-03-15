@@ -1,5 +1,5 @@
 nbformat 4
-nbformat_minor 0
+nbformat_minor 1
 markdown
     # An Alternative Index Page
     
@@ -20,6 +20,7 @@ markdown
     * [Ignoring Errors](allow-errors.ipynb)
     * [Hidden Cells](hidden-cells.ipynb)
     * [A Notebook in a Sub-Directory](subdir/another.ipynb)
+    * [Using `toctree` In A Notebook](subdir/toctree.ipynb)
     * [External Links](links.ipynb)
     
     ... and there is an [Orphan Notebook](orphan.ipynb), which contains a link back to this page (or back to the main index in case of the Sphinx-generated files).
@@ -40,6 +41,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.4.4"
+      "version": "3.5.1+"
      }
     }
