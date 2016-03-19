@@ -1,5 +1,5 @@
 nbformat 4
-nbformat_minor 0
+nbformat_minor 1
 markdown
     This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
   metadata
@@ -62,6 +62,11 @@ markdown
         sphinx-build <source-dir> <build-dir> -b latex
     
     If you don't know how to create a PDF file from the LaTeX output, you should have a look at [Latexmk](http://users.phys.psu.edu/~collins/software/latexmk-jcc/) (see also [this tutorial](http://mg.readthedocs.org/latexmk.html)).
+    
+    Sphinx can automatically check if the links you are using are still valid.
+    Just invoke it like this:
+    
+        sphinx-build <source-dir> <build-dir> -b linkcheck
 markdown
     ## Watching for Changes with `sphinx-autobuild`
     
@@ -75,7 +80,7 @@ markdown
     
         sphinx-autobuild <source-dir> <build-dir>
     
-    This will start a local webserver which will serve the generated HTML pages at http://127.0.0.1:8000/.
+    This will start a local webserver which will serve the generated HTML pages at http://localhost:8000/.
     Whenever you save changes in one of your notebooks, the appropriate HTML page(s) will be re-built and when finished, your browser view will be refreshed automatically.
     Neat!
     
