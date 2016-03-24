@@ -1,5 +1,5 @@
 nbformat 4
-nbformat_minor 0
+nbformat_minor 1
 markdown
     This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
   metadata
@@ -17,9 +17,21 @@ code
      "collapsed": true
     }
 markdown
-    A cell with no output:
+    Two empty lines:
 code
-    None
+    
+    
+  metadata
+    {
+     "collapsed": true
+    }
+markdown
+    Leading/trailing empty lines:
+code
+    
+    
+    # 2 empty lines before, 1 after
+    
   metadata
     {
      "collapsed": true
