@@ -187,7 +187,7 @@ code
     }
 markdown
     The following code showing the 8 basic ANSI colors is based on http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html.
-    Note that Jupyter does not switch to a brighter color for bold text.
+    Each of the 8 colors has an "intense" variation, which is used for bold text.
 code
     text = ' XYZ '
     formatstring = '\x1b[{}m' + text + '\x1b[m'
