@@ -18,6 +18,7 @@ markdown
     * [Raw Cells](raw-cells.ipynb)
     * [A Pre-Executed Notebook](pre-executed.ipynb)
     * [Ignoring Errors](allow-errors.ipynb)
+    * [Long-Running Cells](timeout.ipynb)
     * [Hidden Cells](hidden-cells.ipynb)
     * [A Notebook in a Sub-Directory](subdir/another.ipynb)
     * [Using `toctree` In A Notebook](subdir/toctree.ipynb)
