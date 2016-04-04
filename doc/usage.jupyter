@@ -126,7 +126,7 @@ markdown
     
     The following links show how the `nbsphinx` input and output cells look like in different themes.
     
-    ### Sphinx's Built-in Themes
+    ### Sphinx's Built-In Themes
     
     http://nbsphinx.readthedocs.org/en/alabaster-theme/
     
@@ -142,7 +142,7 @@ markdown
     
     http://nbsphinx.readthedocs.org/en/agogo-theme/
     
-    ### 3rd-party Themes
+    ### 3rd-Party Themes
     
     http://nbsphinx.readthedocs.org/en/readthedocs-theme/
     
