@@ -1,5 +1,5 @@
 nbformat 4
-nbformat_minor 0
+nbformat_minor 1
 markdown
     This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
   metadata
@@ -27,9 +27,9 @@ markdown
     
     Equations can be formatted really nicely, either inline, like $\text{e}^{i\pi} = -1$, or on a separate line, like
     
-    $$
+    \begin{equation}
     \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
-    $$
+    \end{equation}
     
     *Note:* Avoid leading and trailing spaces around math expressions, otherwise errors like the following will occur when Sphinx is running:
     
@@ -132,7 +132,6 @@ markdown
     For LaTeX output, no link is created.
 metadata
     {
-     "celltoolbar": "Raw Cell Format",
      "kernelspec": {
       "display_name": "Python 3",
       "language": "python",
