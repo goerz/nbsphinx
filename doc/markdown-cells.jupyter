@@ -95,8 +95,51 @@ markdown
     
     The alternative text is shown in browsers that don't support those elements. The same text is also shown in Sphinx's LaTeX output.
     
-    > **Note:** You can also use local files for the `<audio>` and `<video>` elements, but you have to create a link to the source file somewhere, because only then are the local files copied to the HTML output directory!
+    <div class="alert alert-info">
+    
+    **Note:** You can also use local files for the `<audio>` and `<video>` elements, but you have to create a link to the source file somewhere, because only then are the local files copied to the HTML output directory!
     You should do that anyway to make the audio/video file accessible to browsers that don't support the `<audio>` and `<video>` elements.
+    
+    </div>
+markdown
+    ## Info/Warning Boxes
+    
+    <div class="alert alert-warning">
+    
+    **Warning:** This is an *experimental feature*!
+    
+    Its usage will probably change in the future or it might be removed completely!
+    
+    </div>
+    
+    Until there is an info/warning extension for Markdown/CommonMark (see [this issue](https://github.com/jupyter/notebook/issues/1292)), such boxes can be created by using HTML `<div>` elements like this:
+    
+    ```html
+    <div class="alert alert-info">
+    
+    **Note:** This is a note!
+    
+    </div>
+    ```
+    
+    For this to work reliably, you should obey the following guidelines:
+    
+    * The `class` attribute has to be either `"alert alert-info"` or `"alert alert-warning"`, other values will not be converted correctly.
+    * No further attributes are allowed.
+    * For compatibility with CommonMark, you should add an empty line between the `<div>` start tag and the beginning of the content.
+    
+    <div class="alert alert-info">
+    
+    **Note:** The text can contain further Markdown formatting.
+    
+    It is even possible to have nested boxes:
+    
+    <div class="alert alert-warning">
+    
+    ... but please don't *overuse* this!
+    
+    </div>
+    </div>
 markdown
     ## Links to Other Notebooks
     
