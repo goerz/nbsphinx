@@ -160,7 +160,8 @@ markdown
     
     * `sphinx_rtd_theme`:
       [example](http://nbsphinx.readthedocs.org/en/readthedocs-theme/),
-      [usage](https://github.com/spatialaudio/nbsphinx/compare/readthedocs-theme^...readthedocs-theme)
+      [usage](https://github.com/spatialaudio/nbsphinx/compare/readthedocs-theme^...readthedocs-theme),
+      [additional CSS file](https://raw.githubusercontent.com/spatialaudio/nbsphinx/readthedocs-theme/doc/_static/nbsphinx-rtd.css)
     
     * `bootstrap`:
       [example](http://nbsphinx.readthedocs.org/en/bootstrap-theme/),
