@@ -106,8 +106,9 @@ markdown
     
     <div class="alert alert-warning">
     
-    **Warning:** This is an *experimental feature*!
+    **Warning:**
     
+    This is an *experimental feature*!
     Its usage will probably change in the future or it might be removed completely!
     
     </div>
@@ -130,8 +131,9 @@ markdown
     
     <div class="alert alert-info">
     
-    **Note:** The text can contain further Markdown formatting.
+    **Note:**
     
+    The text can contain further Markdown formatting.
     It is even possible to have nested boxes:
     
     <div class="alert alert-warning">
