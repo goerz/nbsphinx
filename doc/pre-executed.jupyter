@@ -1,5 +1,5 @@
 nbformat 4
-nbformat_minor 0
+nbformat_minor 1
 markdown
     This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
   metadata
@@ -11,7 +11,26 @@ markdown
     
     Notebooks with no outputs are automatically executed during the Sphinx build process.
     If, however, there is at least one output cell present, the notebook is not evaluated and included as is.
+markdown
+    ## Explicitly disabling notebook execution
     
+    If you want to include a notebook without outputs and yet don't want nbsphinx to execute it for you, you can explicitly disable this feature setting the `nbsphinx_execute` config option to `"false"`.  `nbsphinx_execute`
+    has three possible states, `"always"`, `"auto"` (default), and `"never"`.
+    
+    You can do this globally by setting this option in [conf.py](conf.py):
+    
+    ```
+    nbsphinx_execute = 'never'
+    ```
+    
+    Or on a per notebook basis by adding this to the notebook's JSON metadata:
+    
+    ```json
+    "nbsphinx": {
+      "execute": "never"
+    },
+    ```
+markdown
     This can be useful for the following use cases.
 markdown
     ## Long-Running Cells
@@ -107,5 +126,9 @@ metadata
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
       "version": "3.5.1+"
+     },
+     "widgets": {
+      "state": {},
+      "version": "0.2.0"
      }
     }
