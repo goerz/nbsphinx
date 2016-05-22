@@ -156,6 +156,10 @@ markdown
       [example](http://nbsphinx.readthedocs.org/en/agogo-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/agogo-theme^...agogo-theme)
     
+    * `nature`:
+      [example](http://nbsphinx.readthedocs.org/en/nature-theme/),
+      [usage](https://github.com/spatialaudio/nbsphinx/compare/nature-theme^...nature-theme)
+    
     ### 3rd-Party Themes
     
     * `sphinx_rtd_theme`:
