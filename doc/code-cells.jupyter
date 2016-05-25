@@ -181,6 +181,20 @@ code
      "collapsed": false
     }
 markdown
+    ### Unsupported Output Types
+    
+    If a code cell produces data with an unsupported MIME type, the Jupyter Notebook doesn't generate any output.
+    `nbsphinx`, however, shows a warning message.
+code
+    display({
+        'text/x-python': 'print("Hello, world!")',
+        'text/x-haskell': 'main = putStrLn "Hello, world!"',
+    }, raw=True)
+  metadata
+    {
+     "collapsed": false
+    }
+markdown
     ## ANSI Colors
     
     The standard output and standard error streams may contain [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code) to change the text and background colors.
