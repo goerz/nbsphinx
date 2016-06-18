@@ -1,7 +1,7 @@
 nbformat 4
 nbformat_minor 1
 markdown
-    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
+    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
   metadata
     {
      "nbsphinx": "hidden"
@@ -145,37 +145,44 @@ markdown
 markdown
     ## Links to Other Notebooks
     
-    Relative links to local notebooks can be used: [a link to a notebook in a subdirectory](subdir/another.ipynb), [a link to an orphan notebook](orphan.ipynb) (latter won't work in LaTeX output, because orphan pages are not included there).
+    Relative links to local notebooks can be used:
+    [a link to a notebook in a subdirectory](subdir/a-notebook-in-a-subdir.ipynb),
+    [a link to an orphan notebook](orphan.ipynb)
+    (latter won't work in LaTeX output, because orphan pages are not included there).
     
     This is how a link is created in Markdown:
     
     ```
-    [a link to a notebook in a subdirectory](subdir/another.ipynb)
+    [a link to a notebook in a subdirectory](subdir/a-notebook-in-a-subdir.ipynb)
     ```
     
-    Markdown also supports *reference-style* links: [a reference-style link][mylink], [another version of the same link][mylink].
+    Markdown also supports *reference-style* links:
+    [a reference-style link][mylink],
+    [another version of the same link][mylink].
     
-    [mylink]: subdir/another.ipynb
+    [mylink]: subdir/a-notebook-in-a-subdir.ipynb
     
     These can be created with this syntax:
     
     ```
     [a reference-style link][mylink]
     
-    [mylink]: subdir/another.ipynb
+    [mylink]: subdir/a-notebook-in-a-subdir.ipynb
     ```
     
-    Links to sub-sections are also possible, e.g. [this subsection](subdir/another.ipynb#A-Sub-Section).
+    Links to sub-sections are also possible, e.g.
+    [this subsection](subdir/a-notebook-in-a-subdir.ipynb#A-Sub-Section).
     
     This link was created with:
     
     ```
-    [this subsection](subdir/another.ipynb#A-Sub-Section)
+    [this subsection](subdir/a-notebook-in-a-subdir.ipynb#A-Sub-Section)
     ```
     
     You just have to remember to replace spaces with hyphens!
     
-    BTW, links to sections of the current notebook work, too, e.g. [beginning of this section](#Links-to-Other-Notebooks).
+    BTW, links to sections of the current notebook work, too, e.g.
+    [beginning of this section](#Links-to-Other-Notebooks).
     
     This can be done, as expected, like this:
     
@@ -185,12 +192,12 @@ markdown
 markdown
     ## Links to `*.rst` Files (and Other Sphinx Source Files)
     
-    Links to files whose extension is in the configuration value [source_suffix](http://www.sphinx-doc.org/config.html#confval-source_suffix), will be converted to links to the generated HTML/LaTeX pages. Example: [A reStructuredText file](rst.rst).
+    Links to files whose extension is in the configuration value [source_suffix](http://www.sphinx-doc.org/config.html#confval-source_suffix), will be converted to links to the generated HTML/LaTeX pages. Example: [A reStructuredText file](a-normal-rst-file.rst).
     
     This was created with:
     
     ```
-    [A reStructuredText file](rst.rst)
+    [A reStructuredText file](a-normal-rst-file.rst)
     ```
     
     Links to sub-sections are not (yet?) possible.

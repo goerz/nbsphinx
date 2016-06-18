@@ -1,7 +1,7 @@
 nbformat 4
-nbformat_minor 0
+nbformat_minor 1
 markdown
-    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
+    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
   metadata
     {
      "nbsphinx": "hidden"
@@ -38,7 +38,7 @@ markdown
 markdown
     **Sphinx-Gallery**
     
-    http://sphinx-gallery.readthedocs.org/
+    http://sphinx-gallery.readthedocs.io/
 markdown
     **DocOnce**
     
@@ -50,7 +50,7 @@ markdown
     
     https://gist.github.com/hadim/16e29b5848672e2e497c
     
-    http://sphinx-ipynb.readthedocs.org/
+    http://sphinx-ipynb.readthedocs.io/
 markdown
     **Converting Notebooks to HTML for Blog Posts**
     
@@ -80,6 +80,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.4.4"
+      "version": "3.5.1+"
      }
     }

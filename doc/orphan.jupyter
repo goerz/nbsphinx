@@ -1,7 +1,7 @@
 nbformat 4
 nbformat_minor 1
 markdown
-    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
+    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
   metadata
     {
      "nbsphinx": "hidden"
@@ -9,7 +9,7 @@ markdown
 markdown
     # An Orphan Notebook (HTML Only)
     
-    This means that is doesn't appear in the Sphinx toctree (see [index.rst](index.rst)), but other pages can still link to it ...
+    This means that is doesn't appear in a [toctree](http://www.sphinx-doc.org/en/stable/markup/toctree.html) (see `index.rst`), but other pages can still link to it ...
     
     * ... from a Markdown cell of another notebook using
     
@@ -41,7 +41,13 @@ markdown
     },
     ```
     
-    **Note:** Orphan notebooks are not included in the LaTeX output!
+    <div class="alert alert-info">
+    
+    **Note:**
+    
+    Orphan notebooks are not included in the LaTeX output!
+    
+    </div>
     
     [Back to main page](index.rst)
 metadata

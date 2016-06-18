@@ -1,7 +1,7 @@
 nbformat 4
-nbformat_minor 0
+nbformat_minor 1
 markdown
-    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
+    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
   metadata
     {
      "nbsphinx": "hidden"
@@ -9,17 +9,23 @@ markdown
 markdown
     # Using `toctree` In A Notebook
     
-    In Sphinx-based documentation, there is typically a file called [index.rst](../index.rst) which contains one or more `toctree` directives.
+    In Sphinx-based documentation, there is typically a file called `index.rst` which contains one or more [toctree](http://www.sphinx-doc.org/en/stable/markup/toctree.html) directives.
     Those can be used to pull in further source files (which themselves can contain `toctree` directives).
     
     With `nbsphinx` it is possible to get a similar effect within a Jupyter notebook using the `"nbsphinx-toctree"` cell metadata.
     Markdown cells with `"nbsphinx-toctree"` metadata are not converted like "normal" Markdown cells.
-    Instead, they are only scanned for links to other notebooks (or `*.rst` files) and those links are added to a `toctree` directive.
+    Instead, they are only scanned for links to other notebooks (or `*.rst` files and other Sphinx source files) and those links are added to a `toctree` directive.
     External links can also be used, but they will not be visible in the LaTeX output.
     
-    If there is a section title in the cell, it is used as `toctree` caption.
+    If there is a section title in the cell, it is used as `toctree` caption (but it also works without a title).
     
-    Note: all other content of such a cell is *ignored*!
+    <div class="alert alert-info">
+    
+    **Note:**
+    
+    All other content of such a cell is *ignored*!
+    
+    </div>
     
     Use ...
     
@@ -47,7 +53,7 @@ markdown
         }
     
     For more options, have a look a the [Sphinx documentation](http://www.sphinx-doc.org/markup/toctree.html).
-    All options can be used -- except `:glob:`, which can only be used in [rst files](../rst.rst) and in [raw reST cells](../raw-cells.ipynb#reST).
+    All options can be used -- except `:glob:`, which can only be used in [rst files](../a-normal-rst-file.rst) and in [raw reST cells](../raw-cells.ipynb#reST).
     
     Note that in the HTML output, a `toctree` cell generates an in-line table of contents (containing links) at its position in the notebook, whereas in the LaTeX output, a new (sub-)section with the actual content is inserted at its position.
     All content below the `toctree` cell will appear after the table of contents/inserted section, respectively.
@@ -63,7 +69,7 @@ markdown
     
     [A Notebook that's just a "toctree" Target](../yet-another.ipynb)
     
-    [An External Link (HTML only)](http://nbsphinx.readthedocs.org/)
+    [An External Link (HTML only)](http://nbsphinx.readthedocs.io/)
     
     Only the first section title (optional) and links to other sources (and external links) are used, all other cell content is ignored!
   metadata

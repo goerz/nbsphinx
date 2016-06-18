@@ -1,7 +1,7 @@
 nbformat 4
 nbformat_minor 1
 markdown
-    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.org/.
+    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
   metadata
     {
      "nbsphinx": "hidden"
@@ -9,21 +9,27 @@ markdown
 markdown
     # Usage
     
-    Install `nbsphinx` with [pip](https://pip.pypa.io/en/latest/installing/):
+    ## Installation
     
-        pip install nbsphinx --user
+    Install `nbsphinx` with `pip`:
     
-    If you change your mind, you can un-install it with:
+        python3 -m pip install nbsphinx --user
     
-        pip uninstall nbsphinx
+    If you suddenly change your mind, you can un-install it with:
+    
+        python3 -m pip uninstall nbsphinx
+    
+    Depending on your Python installation, you may have to use `python` instead of `python3`.
+    Recent versions of Python already come with `pip` pre-installed.
+    If you don't have it, you can [install it manually](https://pip.pypa.io/en/latest/installing/).
 markdown
     ## Sphinx Setup
     
     In the directory with your notebook files, run this command (assuming you have [Sphinx](http://sphinx-doc.org/) installed already):
     
-        sphinx-quickstart
-        
-    Answer the questions that appear on the screen. In case of doubt, just press the `<Return>` key to take the default values.
+        python3 -m sphinx.quickstart
+    
+    Answer the questions that appear on the screen. In case of doubt, just press the `<Return>` key repeatedly to take the default values.
     
     After that, there will be a few brand-new files in the current directory.
     You'll have to make a few changes to the file named [conf.py](conf.py). You should at least check if those two variables contain the right things:
@@ -36,22 +42,22 @@ markdown
     exclude_patterns = ['_build', '**.ipynb_checkpoints']
     ```
     
-    Once your `conf.py` is in place, edit the file named [index.rst](index.rst) and add the file names of your notebooks (with or without the `.ipynb` extension) to the `toctree` directive.
+    Once your `conf.py` is in place, edit the file named `index.rst` and add the file names of your notebooks (with or without the `.ipynb` extension) to the [toctree](http://www.sphinx-doc.org/en/stable/markup/toctree.html) directive.
 markdown
     ## Running Sphinx
     
     To create the HTML pages, use this command:
     
-        sphinx-build <source-dir> <build-dir>
-        
+        python3 -m sphinx <source-dir> <build-dir>
+    
     If you have many notebooks, you can do a parallel build by using the `-j` option:
     
-        sphinx-build <source-dir> <build-dir> -j<number-of-processes>
+        python3 -m sphinx <source-dir> <build-dir> -j<number-of-processes>
     
     For example, if your source files are in the current directory and you have 4 CPU cores, you can run this:
     
-        sphinx-build . _build -j4
-        
+        python3 -m sphinx . _build -j4
+    
     Afterwards, you can find the main HTML file in `_build/index.html`.
     
     Subsequent builds will be faster, because only those source files which have changed will be re-built.
@@ -59,44 +65,44 @@ markdown
     
     To create LaTeX output, use:
     
-        sphinx-build <source-dir> <build-dir> -b latex
+        python3 -m sphinx <source-dir> <build-dir> -b latex
     
-    If you don't know how to create a PDF file from the LaTeX output, you should have a look at [Latexmk](http://users.phys.psu.edu/~collins/software/latexmk-jcc/) (see also [this tutorial](http://mg.readthedocs.org/latexmk.html)).
+    If you don't know how to create a PDF file from the LaTeX output, you should have a look at [Latexmk](http://users.phys.psu.edu/~collins/software/latexmk-jcc/) (see also [this tutorial](http://mg.readthedocs.io/latexmk.html)).
     
     Sphinx can automatically check if the links you are using are still valid.
     Just invoke it like this:
     
-        sphinx-build <source-dir> <build-dir> -b linkcheck
+        python3 -m sphinx <source-dir> <build-dir> -b linkcheck
 markdown
     ## Watching for Changes with `sphinx-autobuild`
     
-    If you think it's tedious to run the command `sphinx-build` again and again when you make changes to your notebooks, you'll be happy to hear that there is a way to avoid that: [sphinx-autobuild](https://pypi.python.org/pypi/sphinx-autobuild)!
+    If you think it's tedious to run the Sphinx build command again and again while you make changes to your notebooks, you'll be happy to hear that there is a way to avoid that: [sphinx-autobuild](https://pypi.python.org/pypi/sphinx-autobuild)!
     
     It can be installed with
     
-        pip install sphinx-autobuild --user
-        
+        python3 -m pip install sphinx-autobuild --user
+    
     You can start auto-building your files with
     
         sphinx-autobuild <source-dir> <build-dir>
     
     This will start a local webserver which will serve the generated HTML pages at http://localhost:8000/.
-    Whenever you save changes in one of your notebooks, the appropriate HTML page(s) will be re-built and when finished, your browser view will be refreshed automatically.
+    Whenever you save changes in one of your notebooks, the appropriate HTML page(s) will be re-built and when finished, your browser view will be refreshed automagically.
     Neat!
     
     You can also abuse this to auto-build the LaTeX output:
     
         sphinx-autobuild <source-dir> <build-dir> -b latex
     
-    However, to auto-build the final PDF file, you'll need an additional tool.
+    However, to auto-build the final PDF file as well, you'll need an additional tool.
     Again, you can use `latexmk` for this (see [above](#Running-Sphinx)).
     Change to the build directory and run
     
         latexmk -pdf -pvc
     
-    If your PDF viewer isn't opened because of LaTeX build errors, you can use the option `-f` to *force* creating a PDF file.
+    If your PDF viewer isn't opened because of LaTeX build errors, you can use the command line flag `-f` to *force* creating a PDF file.
 markdown
-    ## Automatic Creation of HTML and PDF output on readthedocs.org
+    ## Automatic Creation of HTML and PDF output on [readthedocs.org](https://readthedocs.org)
     
     This is very easy!
     
@@ -104,10 +110,11 @@ markdown
     
     1. Create a file named [requirements.txt](requirements.txt) (or whatever name you wish) in your repository containing the required pip packages:
     
+            sphinx>=1.4
             nbsphinx
             ipykernel
     
-    1. In the "Advanced Settings" on readthedocs.org, specify your `requirements.txt` file (or however you called it) in the box labelled "Requirements file". Kinda obvious, isn't it?
+    1. In the "Advanced Settings" on readthedocs.org, specify the path to your `requirements.txt` file (or however you called it) in the box labelled "Requirements file". Kinda obvious, isn't it?
     
     1. Still in the "Advanced Settings", make sure the right Python interpreter is chosen.  This must be the same version (2.x or 3.x) as you were using in your notebooks!
     
@@ -116,74 +123,74 @@ markdown
     
     1. Done!
     
-    After that, you only have to "push" to your repository and the HTML pages and the PDF file of your stuff are automagically created on readthedocs.org. Awesome!
+    After that, you only have to "push" to your repository, and the HTML pages and the PDF file of your stuff are automagically created on readthedocs.org. Awesome!
     
     You can even have different versions of your stuff, just use Git tags and branches and select in the readthedocs.org settings (under "Admin", "Versions") which of those should be created.
 markdown
     ## HTML Themes
     
-    The `nbsphinx` extension does *not* provide its own theme, you can use any of the available themes or create a custom one, if you feel like it.
+    The `nbsphinx` extension does *not* provide its own theme, you can use any of the available themes or [create a custom one](http://www.sphinx-doc.org/en/stable/theming.html#creating-themes), if you feel like it.
     
     The following links show how the `nbsphinx` documentation looks like in different themes.
     
     ### Sphinx's Built-In Themes
     
     * `alabaster`:
-      [example](http://nbsphinx.readthedocs.org/en/alabaster-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/alabaster-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/alabaster-theme^...alabaster-theme)
     
     * `pyramid`:
-      [example](http://nbsphinx.readthedocs.org/en/pyramid-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/pyramid-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/pyramid-theme^...pyramid-theme)
     
     * `classic`:
-      [example](http://nbsphinx.readthedocs.org/en/classic-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/classic-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/classic-theme^...classic-theme)
     
     * `bizstyle`:
-      [example](http://nbsphinx.readthedocs.org/en/bizstyle-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/bizstyle-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/bizstyle-theme^...bizstyle-theme)
     
     * `haiku`:
-      [example](http://nbsphinx.readthedocs.org/en/haiku-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/haiku-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/haiku-theme^...haiku-theme)
     
     * `traditional`:
-      [example](http://nbsphinx.readthedocs.org/en/traditional-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/traditional-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/traditional-theme^...traditional-theme)
     
     * `agogo`:
-      [example](http://nbsphinx.readthedocs.org/en/agogo-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/agogo-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/agogo-theme^...agogo-theme)
     
     * `nature`:
-      [example](http://nbsphinx.readthedocs.org/en/nature-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/nature-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/nature-theme^...nature-theme)
     
     ### 3rd-Party Themes
     
     * `sphinx_rtd_theme`:
-      [example](http://nbsphinx.readthedocs.org/en/readthedocs-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/readthedocs-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/readthedocs-theme^...readthedocs-theme)
     
     * `bootstrap`:
-      [example](http://nbsphinx.readthedocs.org/en/bootstrap-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/bootstrap-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/bootstrap-theme^...bootstrap-theme)
     
     * `cloud`, `redcloud`:
-      [example](http://nbsphinx.readthedocs.org/en/cloud-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/cloud-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/cloud-theme^...cloud-theme)
     
     * `sphinx_py3doc_enhanced_theme`:
-      [example](http://nbsphinx.readthedocs.org/en/py3doc-enhanced-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/py3doc-enhanced-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/py3doc-enhanced-theme^...py3doc-enhanced-theme)
     
     * `basicstrap`:
-      [example](http://nbsphinx.readthedocs.org/en/basicstrap-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/basicstrap-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/basicstrap-theme^...basicstrap-theme)
     
     * `dotted`:
-      [example](http://nbsphinx.readthedocs.org/en/dotted-theme/),
+      [example](http://nbsphinx.readthedocs.io/en/dotted-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/dotted-theme^...dotted-theme)
     
     If you know of another Sphinx theme that should be included here, please open an [issue on Github](https://github.com/spatialaudio/nbsphinx/issues).
