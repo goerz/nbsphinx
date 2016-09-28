@@ -195,6 +195,25 @@ code
      "collapsed": false
     }
 markdown
+    ### Arbitrary JavaScript Output (HTML only)
+  metadata
+    {
+     "deletable": true,
+     "editable": true
+    }
+code
+    %%javascript
+    
+    var text = document.createTextNode("Hello, I was generated with JavaScript!");
+    // Content appended to "element" will be visible in the output area:
+    element.append(text);
+  metadata
+    {
+     "collapsed": false,
+     "deletable": true,
+     "editable": true
+    }
+markdown
     ### Unsupported Output Types
     
     If a code cell produces data with an unsupported MIME type, the Jupyter Notebook doesn't generate any output.
