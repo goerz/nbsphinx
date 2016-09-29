@@ -65,20 +65,18 @@ markdown
     
     Once your `conf.py` is in place, edit the file named `index.rst` and add the file names of your notebooks (with or without the `.ipynb` extension) to the [toctree](http://www.sphinx-doc.org/en/stable/markup/toctree.html) directive.
     
-    
-    
-    <br>
     <div class="alert alert-info">
     
-    **autosummary bug:** If you are using the `autosummary` sphinx extension, there is a bug in sphinx which prevents notebooks from being parsed. 
-    As a work-around you can explicitly list all the files for which autosummary should be ran using the  [`autosummary_generate`](http://www.sphinx-doc.org/en/stable/ext/autosummary.html#confval-autosummary_generate) variable in `conf.py`.  For example, <br>
+    **autosummary bug:**
     
-    ``autosummary_generate = ['myfile1.rst', 'myfile2.rst']``
+    If you are using the `sphinx.ext.autosummary` Sphinx extension, there is [a bug in Sphinx (below version 1.5)](https://github.com/sphinx-doc/sphinx/issues/2485) which prevents notebooks from being parsed. 
+    As a work-around you can explicitly list all the files for which autosummary should be ran using the  [autosummary_generate](http://www.sphinx-doc.org/en/stable/ext/autosummary.html#confval-autosummary_generate) variable in `conf.py`.  For example,
     
+    ```python
+    autosummary_generate = ['myfile1.rst', 'myfile2.rst']
+    ```
     
     </div>
-    
-        
 markdown
     ## Running Sphinx
     
