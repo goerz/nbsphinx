@@ -214,6 +214,15 @@ code
      "editable": true
     }
 markdown
+    <div class="alert alert-info">
+    
+    **Note:**
+    
+    jQuery should be available, but using the readthedocs.org default theme, it's not. See [the issue on Github](https://github.com/snide/sphinx_rtd_theme/issues/328).
+    Other Sphinx themes are not affected by this.
+    
+    </div>
+markdown
     ### Unsupported Output Types
     
     If a code cell produces data with an unsupported MIME type, the Jupyter Notebook doesn't generate any output.
