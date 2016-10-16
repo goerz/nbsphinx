@@ -74,15 +74,15 @@ code 5
   - evalue
     division by zero
   - traceback
-    [1;31m---------------------------------------------------------------------------[0m
+    [0;31m---------------------------------------------------------------------------[0m
    ~
-    [1;31mZeroDivisionError[0m                         Traceback (most recent call last)
+    [0;31mZeroDivisionError[0m                         Traceback (most recent call last)
    ~
-    [1;32m<ipython-input-5-b710d87c980c>[0m in [0;36m<module>[1;34m()[0m
-    [1;32m----> 1[1;33m [1;36m1[0m [1;33m/[0m [1;36m0[0m[1;33m[0m[0m
+    [0;32m<ipython-input-5-b710d87c980c>[0m in [0;36m<module>[0;34m()[0m
+    [0;32m----> 1[0;31m [0;36m1[0m [0;34m/[0m [0;36m0[0m[0;34m[0m[0m
     [0m
    ~
-    [1;31mZeroDivisionError[0m: division by zero
+    [0;31mZeroDivisionError[0m: division by zero
   metadata
     {
      "collapsed": false
