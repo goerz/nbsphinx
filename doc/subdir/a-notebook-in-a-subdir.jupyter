@@ -20,6 +20,14 @@ code
      "collapsed": false
     }
 markdown
+    <div class="alert alert-warning">
+    
+    **Warning:**
+    
+    There may be problems with images in output cells if your source directory contains symbolic links, see [issue #49](https://github.com/spatialaudio/nbsphinx/issues/49).
+    
+    </div>
+    
     A link to a notebook in the parent directory: [link](../markdown-cells.ipynb).
     
     A link to a local file: [link](../images/notebook_icon.png).

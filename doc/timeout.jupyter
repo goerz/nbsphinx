@@ -22,10 +22,10 @@ markdown
     ```json
     "nbsphinx": {
       "timeout": 60
-    }
+    },
     ```
     
-    Alternatively, you can manually execute the notebook in question and save the results, see [the pre-executed example notebook](pre-executed.ipynb#Long-Running-Cells).
+    Alternatively, you can manually execute the notebook in question and save the results, see [the pre-executed example notebook](pre-executed.ipynb).
 metadata
     {
      "kernelspec": {

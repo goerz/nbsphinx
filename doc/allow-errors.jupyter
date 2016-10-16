@@ -13,7 +13,7 @@ markdown
     
     If a notebook contains errors on purpose (or if you are too lazy to fix them right now), you have three options:
     
-    1. Manually execute the notebook in question and save the results, see [the pre-executed example notebook](pre-executed.ipynb#Exceptions).
+    1. Manually execute the notebook in question and save the results, see [the pre-executed example notebook](pre-executed.ipynb).
     
     2. Allow errors in all notebooks by setting this option in [conf.py](conf.py):
     ```
