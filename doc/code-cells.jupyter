@@ -206,7 +206,7 @@ code
     
     var text = document.createTextNode("Hello, I was generated with JavaScript!");
     // Content appended to "element" will be visible in the output area:
-    element.append(text);
+    element.appendChild(text);
   metadata
     {
      "collapsed": false,
