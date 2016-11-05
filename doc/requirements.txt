@@ -4,3 +4,4 @@ matplotlib
 pandas
 sphinxcontrib-bibtex
 sphinxcontrib-svg2pdfconverter
+guzzle_sphinx_theme
