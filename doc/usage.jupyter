@@ -138,28 +138,90 @@ markdown
 markdown
     ## Automatic Creation of HTML and PDF output on [readthedocs.org](https://readthedocs.org)
     
-    This is very easy!
+    There are two different methods, both of which are described below.
     
-    1. Create an account on https://readthedocs.org/ and add your Github/Bitbucket repository (or any publicly available Git/Subversion/Mercurial/Bazaar repository).
+    In both cases, you'll first have to create an account on https://readthedocs.org/ and connect your Github/Bitbucket account. Instead of connecting, you can also manually add any publicly available Git/Subversion/Mercurial/Bazaar repository.
     
-    1. Create a file named [requirements.txt](requirements.txt) (or whatever name you wish) in your repository containing the required pip packages:
+    After doing the steps described below, you only have to "push" to your repository, and the HTML pages and the PDF file of your stuff are automagically created on readthedocs.org. Awesome!
+    
+    You can even have different versions of your stuff, just use Git tags and branches and select in the readthedocs.org settings (under "Admin", "Versions") which of those should be created.
+    
+    <div class="alert alert-info">
+    
+    **Note:**
+    
+    If you want to execute notebooks (see [Controlling Notebook Execution](executing-notebooks.ipynb)), you'll need to install the appropriate Jupyter kernel.  In the examples below, the IPython kernel ist installed from the packet `ipykernel`.
+    
+    </div>
+markdown
+    ### Using `requirements.txt`
+    
+    1. Create a file named `requirements.txt` (or whatever name you wish) in your repository containing the required pip packages:
     
             sphinx>=1.4
-            nbsphinx
             ipykernel
+            nbsphinx
+            
+        You can also install directly from Github et al., using a specific branch/tag/commit, e.g.
+    
+            git+https://github.com/spatialaudio/nbsphinx.git@master
     
     1. In the "Advanced Settings" on readthedocs.org, specify the path to your `requirements.txt` file (or however you called it) in the box labelled "Requirements file". Kinda obvious, isn't it?
     
     1. Still in the "Advanced Settings", make sure the right Python interpreter is chosen.  This must be the same version (2.x or 3.x) as you were using in your notebooks!
+markdown
+    ### Using `conda`
     
-    1. Make sure that in the "Settings" of your Github repository, under "Webhooks & services", "ReadTheDocs" is listed and activated in the "Services" section. If not, use "Add service".
-        There is probably a similar thing for Bitbucket.
+    1. Create a file named `readthedocs.yml` in the main directory of your repository, containing the name of yet another file:
     
-    1. Done!
+            conda:
+              file: readthedocs-environment.yml
     
-    After that, you only have to "push" to your repository, and the HTML pages and the PDF file of your stuff are automagically created on readthedocs.org. Awesome!
+    1. Create the file mentioned above.
+    You can choose whatever name you want (it may also live in a subdirectory, e.g. `doc/environment.yml`), it just has to match whatever is specified in `readthedocs.yml`.
+    The second file describes a [conda environment](http://conda.pydata.org/docs/using/envs.html) and should contain something like this:
     
-    You can even have different versions of your stuff, just use Git tags and branches and select in the readthedocs.org settings (under "Admin", "Versions") which of those should be created.
+            channels:
+              - conda-forge
+            dependencies:
+              - python>=3
+              - sphinx>=1.4
+              - pandoc
+              - nbconvert
+              - ipykernel
+              - pip:
+                - nbsphinx
+    
+        You can of course add further `conda` and `pip` packages. You can also install packages directly from Github et al., using a specific branch/tag/commit, e.g.
+        
+              - pip:
+                - git+https://github.com/spatialaudio/nbsphinx.git@master
+    
+    <div class="alert alert-info">
+    
+    **Note:**
+    
+    The specification of the `conda-forge` channel is necessary for the `pandoc` packages, which is not part of the default channel.
+    
+    The currently pre-installed version of `pandoc` doesn't seem to convert HTML5 `<audio>` elements correctly. See [nbsphinx issue #69](https://github.com/spatialaudio/nbsphinx/issues/69) and [readthedocs.org issue #2521](https://github.com/rtfd/readthedocs.org/issues/2521).
+    
+    </div>
+    
+    <div class="alert alert-info">
+    
+    **Note:**
+    
+    Most of the "Advanced Settings" on readthedocs.org will be ignored if you have a `readthedocs.yml` file.
+    
+    </div>
+    
+    <div class="alert alert-warning">
+    
+    **Warning:**
+    
+    If you have a very long repository name (or branch name), you might run into this quite obscure problem: ['placeholder too short'](https://github.com/rtfd/readthedocs.org/issues/1902).
+    
+    </div>
 markdown
     ## HTML Themes
     
