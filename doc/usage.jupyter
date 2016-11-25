@@ -270,8 +270,8 @@ markdown
     ### 3rd-Party Themes
     
     * [sphinx_rtd_theme](https://github.com/snide/sphinx_rtd_theme):
-      [example](http://nbsphinx.readthedocs.io/en/readthedocs-theme/),
-      [usage](https://github.com/spatialaudio/nbsphinx/compare/readthedocs-theme^...readthedocs-theme)
+      [example](http://nbsphinx.readthedocs.io/en/rtd-theme/),
+      [usage](https://github.com/spatialaudio/nbsphinx/compare/rtd-theme^...rtd-theme)
     
     * [bootstrap](http://sphinx-bootstrap-theme.readthedocs.io/):
       [example](http://nbsphinx.readthedocs.io/en/bootstrap-theme/),
