@@ -227,11 +227,15 @@ markdown
     
     The `nbsphinx` extension does *not* provide its own theme, you can use any of the available themes or [create a custom one](http://www.sphinx-doc.org/en/stable/theming.html#creating-themes), if you feel like it.
     
-    The following links show how the `nbsphinx` documentation looks like in different themes.
+    The following (incomplete) list of themes contains several links for each theme:
+    
+    1. The documentation (or the official sample page) of this theme (if available, see also the [documentation of the built-in Sphinx themes](http://www.sphinx-doc.org/en/latest/theming.html#builtin-themes))
+    1. How the `nbsphinx` documentation looks when using this theme
+    1. How to enable this theme using either `requirements.txt` or `readthedocs.yml` and theme-specific settings (in some cases)
     
     ### Sphinx's Built-In Themes
     
-    * `alabaster`:
+    * [alabaster](https://alabaster.readthedocs.io/):
       [example](http://nbsphinx.readthedocs.io/en/alabaster-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/alabaster-theme^...alabaster-theme)
     
@@ -265,39 +269,39 @@ markdown
     
     ### 3rd-Party Themes
     
-    * `sphinx_rtd_theme`:
+    * [sphinx_rtd_theme](https://github.com/snide/sphinx_rtd_theme):
       [example](http://nbsphinx.readthedocs.io/en/readthedocs-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/readthedocs-theme^...readthedocs-theme)
     
-    * `bootstrap`:
+    * [bootstrap](http://sphinx-bootstrap-theme.readthedocs.io/):
       [example](http://nbsphinx.readthedocs.io/en/bootstrap-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/bootstrap-theme^...bootstrap-theme)
     
-    * `cloud`, `redcloud`:
+    * [cloud](https://pythonhosted.org/cloud_sptheme/):
       [example](http://nbsphinx.readthedocs.io/en/cloud-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/cloud-theme^...cloud-theme)
     
-    * `sphinx_py3doc_enhanced_theme`:
+    * [sphinx_py3doc_enhanced_theme](https://github.com/ionelmc/sphinx-py3doc-enhanced-theme):
       [example](http://nbsphinx.readthedocs.io/en/py3doc-enhanced-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/py3doc-enhanced-theme^...py3doc-enhanced-theme)
     
-    * `basicstrap`:
+    * [basicstrap](http://pythonhosted.org/sphinxjp.themes.basicstrap/):
       [example](http://nbsphinx.readthedocs.io/en/basicstrap-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/basicstrap-theme^...basicstrap-theme)
     
-    * `dotted`:
+    * [dotted](https://pythonhosted.org/sphinxjp.themes.dotted/):
       [example](http://nbsphinx.readthedocs.io/en/dotted-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/dotted-theme^...dotted-theme)
     
-    * `better`:
+    * [better](https://sphinx-better-theme.readthedocs.io/):
       [example](http://nbsphinx.readthedocs.io/en/better-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/better-theme^...better-theme)
     
-    * `guzzle_sphinx_theme`:
+    * [guzzle_sphinx_theme](https://github.com/guzzle/guzzle_sphinx_theme):
       [example](http://nbsphinx.readthedocs.io/en/guzzle-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/guzzle-theme^...guzzle-theme)
     
-    * `julia`:
+    * [julia](https://github.com/JuliaLang/JuliaDoc):
       [example](http://nbsphinx.readthedocs.io/en/julia-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/julia-theme^...julia-theme)
     
