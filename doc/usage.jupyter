@@ -205,8 +205,6 @@ markdown
     
     The specification of the `conda-forge` channel is necessary for the `pandoc` package, which is not part of the default channel.
     
-    The currently pre-installed version of `pandoc` doesn't seem to convert HTML5 `<audio>` elements correctly. See [nbsphinx issue #69](https://github.com/spatialaudio/nbsphinx/issues/69) and [readthedocs.org issue #2521](https://github.com/rtfd/readthedocs.org/issues/2521).
-    
     </div>
     
     <div class="alert alert-info">
