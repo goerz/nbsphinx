@@ -11,9 +11,13 @@ markdown
     
     ## Installation
     
+    ### nbsphinx
+    
     Install `nbsphinx` with `pip`:
     
         python3 -m pip install nbsphinx --user
+    
+    If you want to install it system-wide for all users (assuming you have the necessary rights), just drop the `--user` flag.
     
     If you suddenly change your mind, you can un-install it with:
     
@@ -22,6 +26,18 @@ markdown
     Depending on your Python installation, you may have to use `python` instead of `python3`.
     Recent versions of Python already come with `pip` pre-installed.
     If you don't have it, you can [install it manually](https://pip.pypa.io/en/latest/installing/).
+    
+    To upgrade to the newest release, use the `--upgrade` flag:
+    
+        python3 -m pip install nbsphinx --upgrade --user
+    
+    If you don't want to use `pip`, you can also try to install `nbsphinx` with your package manager.
+    For example, there is a [package for conda-forge](https://anaconda.org/conda-forge/nbsphinx)
+    and packages for
+    [Debian](https://packages.debian.org/search?keywords=nbsphinx),
+    [Ubuntu](http://packages.ubuntu.com/search?keywords=nbsphinx), [Arch](https://aur.archlinux.org/packages/python-nbsphinx/)
+    and [Gentoo](https://packages.gentoo.org/packages/dev-python/nbsphinx) Linux.
+    Note that those might not provide the latest releases.
     
     ### pandoc
     
