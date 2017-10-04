@@ -200,7 +200,13 @@ markdown
     [A reStructuredText file](a-normal-rst-file.rst)
     ```
     
-    Links to sub-sections are not (yet?) possible.
+    Links to sub-sections are also possible. Example: [Sphinx Directives](a-normal-rst-file.html#sphinx-directives-for-info-warning-boxes)
+    This was created with:
+    
+    ```
+    [Sphinx Directives](a-normal-rst-file.rst#sphinx-directives-for-info-warning-boxes)
+    ```
+    
 markdown
     ## Links to Local Files (HTML only)
     
