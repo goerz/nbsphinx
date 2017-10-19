@@ -200,13 +200,13 @@ markdown
     [A reStructuredText file](a-normal-rst-file.rst)
     ```
     
-    Links to sub-sections are also possible. Example: [Sphinx Directives](a-normal-rst-file.rst#Sphinx-Directives-for-Info/Warning-Boxes)
+    Links to sub-sections are also possible. Example: [Sphinx Directives](a-normal-rst-file.rst#Sphinx-Directives-for-Info/Warning-Boxes).
+    
     This was created with:
     
     ```
     [Sphinx Directives](a-normal-rst-file.rst#Sphinx-Directives-for-Info/Warning-Boxes)
     ```
-    
 markdown
     ## Links to Local Files (HTML only)
     
@@ -230,7 +230,6 @@ markdown
     ```
     [example_python_function](a-normal-rst-file.rst#example_python_function)
     ```
-    
 metadata
     {
      "kernelspec": {
