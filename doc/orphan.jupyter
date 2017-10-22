@@ -11,22 +11,22 @@ markdown
     
     This means that is doesn't appear in a [toctree](http://www.sphinx-doc.org/en/stable/markup/toctree.html) (see `index.rst`), but other pages can still link to it ...
     
-    * ... from a Markdown cell of another notebook using
+    * ... from a [Markdown cell of another notebook](markdown-cells.ipynb#Links-to-Other-Notebooks) using
     
         ```
         [some link text](notebookname.ipynb)
         ```
     
-    * ... from a reST page using
+    * ... from a [reST page](a-normal-rst-file.rst#Links-to-Notebooks) using
     
         ```rst
-        :ref:`notebookname.ipynb`
+        :ref:`/notebookname.ipynb`
         ```
     
         or
     
         ```rst
-        :ref:`alternative link text <notebookname.ipynb>`
+        :ref:`alternative link text </notebookname.ipynb>`
         ```
     
     Sphinx raises a warning in case of orphaned documents:
@@ -67,7 +67,7 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.5.1+"
+      "version": "3.6.3"
      },
      "nbsphinx": {
       "orphan": true
