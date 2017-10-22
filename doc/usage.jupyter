@@ -7,41 +7,75 @@ markdown
      "nbsphinx": "hidden"
     }
 markdown
-    # Usage
+    # Installation and Usage
     
     ## Installation
     
-    ### nbsphinx
+    Note that some packages may be out-of-date.
+    You can always get the newest `nbsphinx` release from [PyPI](https://pypi.python.org/pypi/nbsphinx) (using `pip`).
+    If you want to try the latest development version, have a look at the file [CONTRIBUTING.rst](https://github.com/spatialaudio/nbsphinx/blob/master/CONTRIBUTING.rst).
     
-    Install `nbsphinx` with `pip`:
+    ### nbsphinx Packages
+    
+    [![Anaconda Badge](https://anaconda.org/conda-forge/nbsphinx/badges/version.svg)](https://anaconda.org/conda-forge/nbsphinx)
+    
+    If you are using the `conda` package manager (e.g. with [Anaconda](https://www.anaconda.com/download/) for Linux/macOS/Windows), you can install `nbsphinx` from the [conda-forge](https://conda-forge.org/) channel:
+    
+        conda install -c conda-forge nbsphinx
+    
+    If you are using Linux, there are packages available for many distributions.
+    
+    [![Packaging status](https://repology.org/badge/vertical-allrepos/python:nbsphinx.svg)](https://repology.org/metapackage/python:nbsphinx)
+    
+    You can also install `nbsphinx` with `pip`, Python's own package manager:
     
         python3 -m pip install nbsphinx --user
     
     If you want to install it system-wide for all users (assuming you have the necessary rights), just drop the `--user` flag.
+    
+    To upgrade an existing `nbsphinx` installation to the newest release, use the `--upgrade` flag:
+    
+        python3 -m pip install nbsphinx --upgrade --user
     
     If you suddenly change your mind, you can un-install it with:
     
         python3 -m pip uninstall nbsphinx
     
     Depending on your Python installation, you may have to use `python` instead of `python3`.
+markdown
+    ### nbsphinx Prerequisites
+    
+    Some of the aforementioned packages will install some of these prerequisites automatically, some of the things may be already installed on your computer anyway.
+    
+    #### Python
+    
+    Of course you'll need Python, because both Sphinx and `nbsphinx` are implemented in Python.
+    There are many ways to get Python.
+    If you don't know which one is best for you, you can try [Anaconda](https://www.anaconda.com/download/).
+    
+    #### Sphinx
+    
+    You'll need [Sphinx](http://www.sphinx-doc.org/) as well, because `nbsphinx` is just a Sphinx extension and doesn't do anything on its own.
+    
+    If you use `conda`, you can get [Sphinx from the conda-forge channel](https://anaconda.org/conda-forge/sphinx):
+    
+        conda install -c conda-forge sphinx
+    
+    Alternatively, you can install it with `pip` (see below):
+    
+        python3 -m pip install Sphinx --user
+    
+    #### pip
+    
     Recent versions of Python already come with `pip` pre-installed.
     If you don't have it, you can [install it manually](https://pip.pypa.io/en/latest/installing/).
     
-    To upgrade to the newest release, use the `--upgrade` flag:
+    #### pandoc
     
-        python3 -m pip install nbsphinx --upgrade --user
+    The stand-alone program [pandoc](http://pandoc.org/) is used to convert Markdown content to something Sphinx can understand. You have to install this program separately, ideally with your package manager. If you are using `conda`, you can install [pandoc from the conda-forge channel](https://anaconda.org/conda-forge/pandoc):
     
-    If you don't want to use `pip`, you can also try to install `nbsphinx` with your package manager.
-    For example, there is a [package for conda-forge](https://anaconda.org/conda-forge/nbsphinx)
-    and packages for
-    [Debian](https://packages.debian.org/search?keywords=nbsphinx),
-    [Ubuntu](http://packages.ubuntu.com/search?keywords=nbsphinx), [Arch](https://aur.archlinux.org/packages/python-nbsphinx/)
-    and [Gentoo](https://packages.gentoo.org/packages/dev-python/nbsphinx) Linux.
-    Note that those might not provide the latest releases.
+        conda install -c conda-forge pandoc
     
-    ### pandoc
-    
-    The stand-alone program [pandoc](http://pandoc.org/) is used to convert Markdown content to something Sphinx can understand. You have to install this program separately, ideally with your package manager. If you are using `conda`, you can select the [conda-forge](https://conda-forge.github.io/) channel to install the [pandoc](https://anaconda.org/conda-forge/pandoc) package.
     If that doesn't work out for you, have a look at `pandoc`'s [installation instructions](http://pandoc.org/installing.html).
     
     <div class="alert alert-info">
@@ -52,40 +86,45 @@ markdown
     
     </div>
     
-    ### Syntax Highlighting
+    #### Pygments Lexer for Syntax Highlighting
     
     To get proper syntax highlighting in code cells, you'll need an appropriate *Pygments lexer*.
     This of course depends on the programming language of your Jupyter notebooks (more specifically, the `pygments_lexer` metadata of your notebooks).
     
-    For example, if you use Python in your notebooks, you'll have to have the `IPython` package installed:
+    For example, if you use Python in your notebooks, you'll have to have the `IPython` package installed, e.g. with
+    
+        conda install -c conda-forge ipython
+    
+    or
     
         python3 -m pip install IPython --user
-    
-    You'll most likely have this installed already.
-    
     
     <div class="alert alert-info">
     
     **Note:**
     
-    If you are using Anaconda and syntax highlighting in code cells doesn't seem to work,
-    you can try to install IPython with `pip`, or as a work-around,
-    add `'IPython.sphinxext.ipython_console_highlighting'` to `extensions` in my `conf.py`.
+    If you are using Anaconda with the default channel and syntax highlighting in code cells doesn't seem to work,
+    you can try to install IPython from the `conda-forge` channel or directly with `pip`, or as a work-around,
+    add `'IPython.sphinxext.ipython_console_highlighting'` to `extensions` in your `conf.py`.
     
     For details, see [Anaconda issue #1430](https://github.com/ContinuumIO/anaconda-issues/issues/1430) and
     [nbsphinx issue #24](https://github.com/spatialaudio/nbsphinx/issues/24).
     
     </div>
     
-    ### Jupyter Kernel
+    #### Jupyter Kernel
     
-    If you want to execute your notebooks during the Sphinx build process (see [Executing Notebooks](executing-notebooks.ipynb)), you need an appropriate [Jupyter kernel](http://jupyter.readthedocs.io/en/latest/projects/kernels.html) installed.
+    If you want to execute your notebooks during the Sphinx build process (see [Controlling Notebook Execution](executing-notebooks.ipynb)), you need an appropriate [Jupyter kernel](http://jupyter.readthedocs.io/en/latest/projects/kernels.html) installed.
     
-    For example, if you use Python, you should install the `ipykernel` package:
+    For example, if you use Python, you should install the `ipykernel` package, e.g. with
+    
+        conda install -c conda-forge ipykernel
+    
+    or
     
         python3 -m pip install ipykernel --user
     
-    Again, it's very likely that you have that installed already.
+    If you created your notebooks yourself with Jupyter, it's very likely that you have the right kernel installed already.
 markdown
     ## Sphinx Setup
     
@@ -237,7 +276,8 @@ markdown
               - pip:
                 - nbsphinx
     
-        You can of course add further `conda` and `pip` packages. You can also install packages directly from Github et al., using a specific branch/tag/commit, e.g.
+        It is up to you if you want to install `nbsphinx` with `conda` or with `pip`.
+        And you can of course add further `conda` and `pip` packages. You can also install packages directly from Github et al., using a specific branch/tag/commit, e.g.
         
               - pip:
                 - git+https://github.com/spatialaudio/nbsphinx.git@master
@@ -246,7 +286,7 @@ markdown
     
     **Note:**
     
-    The specification of the `conda-forge` channel is necessary for the `pandoc` package, which is not part of the default channel.
+    The specification of the `conda-forge` channel is recommended because it tends to have more recent package versions than the default channel.
     
     </div>
     
@@ -370,6 +410,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.5.2+"
+      "version": "3.6.3"
      }
     }
