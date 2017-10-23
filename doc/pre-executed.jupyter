@@ -11,6 +11,7 @@ markdown
     
     Automatically executing notebooks during the Sphinx build process is an important feature of `nbsphinx`.
     However, there are a few use cases where pre-executing a notebook and storing the outputs might be preferable.
+    Storing any output will, by default, stop ``nbsphinx`` from executing the notebook.
 markdown
     ## Long-Running Cells
     
