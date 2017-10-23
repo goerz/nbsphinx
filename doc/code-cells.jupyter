@@ -14,19 +14,11 @@ markdown
     An empty code cell:
 code
     
-  metadata
-    {
-     "collapsed": true
-    }
 markdown
     Two empty lines:
 code
     
     
-  metadata
-    {
-     "collapsed": true
-    }
 markdown
     Leading/trailing empty lines:
 code
@@ -34,35 +26,19 @@ code
     
     # 2 empty lines before, 1 after
     
-  metadata
-    {
-     "collapsed": true
-    }
 markdown
     A simple output:
 code
     6 * 7
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     The standard output stream:
 code
     print('Hello, world!')
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     Normal output + standard output
 code
     print('Hello, world!')
     6 * 7
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     The standard error stream is highlighted and displayed just below the code cell.
     The standard output stream comes afterwards (with no special highlighting).
@@ -73,10 +49,6 @@ code
     print("I'll appear on the standard error stream", file=sys.stderr, flush=True)
     print("I'll appear on the standard output stream")
     "I'm the 'normal' output"
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     ## Cell Magics
     
@@ -87,10 +59,6 @@ code
     do
         echo $i
     done
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     ## Special Display Formats
     
@@ -99,120 +67,57 @@ markdown
     TODO: tables? e.g. Pandas DataFrame?
 code
     from IPython.display import display
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     ### Local Image Files
 code
     from IPython.display import Image
     i = Image(filename='images/notebook_icon.png')
     i
-  metadata
-    {
-     "collapsed": false
-    }
 code
     display(i)
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     For some reason this doesn't work with `Image(...)`:
 code
     from IPython.display import SVG
     SVG(filename='images/python_logo.svg')
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     ### Image URLs
 code
     Image(url='https://www.python.org/static/img/python-logo-large.png')
-  metadata
-    {
-     "collapsed": false
-    }
 code
     Image(url='https://www.python.org/static/img/python-logo-large.png', embed=True)
-  metadata
-    {
-     "collapsed": false
-    }
 code
     Image(url='http://jupyter.org/assets/nav_logo.svg')
-  metadata
-    {
-     "collapsed": false
-    }
 code
     Image(url='https://www.python.org/static/favicon.ico')
-  metadata
-    {
-     "collapsed": false
-    }
 code
     Image(url='http://python.org/images/python-logo.gif')
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     ### Math
 code
     from IPython.display import Math
     eq = Math(r"\int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)")
     eq
-  metadata
-    {
-     "collapsed": false
-    }
 code
     display(eq)
-  metadata
-    {
-     "collapsed": false
-    }
 code
     %%latex
     \begin{equation}
     \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
     \end{equation}
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     ### YouTube Videos
 code
     from IPython.display import YouTubeVideo
     YouTubeVideo('WAikxUGbomY')
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     ### Arbitrary JavaScript Output (HTML only)
-  metadata
-    {
-     "deletable": true,
-     "editable": true
-    }
 code
     %%javascript
     
     var text = document.createTextNode("Hello, I was generated with JavaScript!");
     // Content appended to "element" will be visible in the output area:
     element.appendChild(text);
-  metadata
-    {
-     "collapsed": false,
-     "deletable": true,
-     "editable": true
-    }
 markdown
     <div class="alert alert-info">
     
@@ -232,10 +137,6 @@ code
         'text/x-python': 'print("Hello, world!")',
         'text/x-haskell': 'main = putStrLn "Hello, world!"',
     }, raw=True)
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     ## ANSI Colors
     
@@ -245,7 +146,7 @@ code
     print('ABC\x1b[43mDEF\x1b[35mGHI\x1b[1mJKL\x1b[49mMNO\x1b[39mPQR\x1b[22mSTU')
   metadata
     {
-     "collapsed": false
+     "scrolled": true
     }
 markdown
     The following code showing the 8 basic ANSI colors is based on http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html.
@@ -262,10 +163,6 @@ code
             print(' {:>4} '.format(fg_code) + formatstring.format(fg_code) +
                   ''.join(formatstring.format(fg_code + ';' + str(bg))
                           for bg in range(40, 48)))
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     ANSI also supports a set of 256 indexed colors.
     The following code showing all of them is based on http://bitmote.com/index.php?post/2012/11/19/Using-ANSI-Color-Codes-to-Colorize-Your-Bash-Prompt-on-Linux.
@@ -278,10 +175,6 @@ code
         i = i * 36 + 16
         print('{:3} '.format(i) + ''.join(formatstring.format(i + j)
                                           for j in range(36) if i + j < 256))
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     You can even use 24-bit RGB colors:
 code
@@ -296,10 +189,6 @@ code
                    '38;2;{rgb[2]};{rgb[1]};{rgb[0]};'
                    '48;2;{rgb[0]};{rgb[1]};{rgb[2]}mX\x1b[m'.format(rgb=rgb))
     print(''.join(out))
-  metadata
-    {
-     "collapsed": false
-    }
 metadata
     {
      "kernelspec": {
@@ -317,6 +206,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.5.2+"
+      "version": "3.6.3"
      }
     }
