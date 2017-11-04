@@ -30,10 +30,6 @@ markdown
     Although the previous cell is not visible, its result is still available:
 code
     answer
-  metadata
-    {
-     "collapsed": false
-    }
 markdown
     Don't overuse this, because it may make it harder to follow what's going on in your notebook.
     
@@ -45,6 +41,8 @@ markdown
     {
      "nbsphinx": "hidden"
     }
+markdown
+    This is the cell after the hidden cell.
 metadata
     {
      "kernelspec": {
@@ -62,6 +60,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.5.1+"
+      "version": "3.6.3"
      }
     }

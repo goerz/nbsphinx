@@ -70,7 +70,7 @@ markdown
     
     Raw cells in "LaTeX" format are only visible in LaTeX output.
 raw
-    \textbf{I'm} a \emph{raw cell} \href{https://www.latex-project.org/}{\LaTeX} format.
+    \textbf{I'm} a \emph{raw cell} in \href{https://www.latex-project.org/}{\LaTeX} format.
   metadata
     {
      "raw_mimetype": "text/latex"

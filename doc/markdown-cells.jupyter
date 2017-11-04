@@ -207,6 +207,8 @@ markdown
     ```
     [Sphinx Directives](a-normal-rst-file.rst#Sphinx-Directives-for-Info/Warning-Boxes)
     ```
+    
+    Again, you'll have to replace spaces with hyphens in sub-section titles.
 markdown
     ## Links to Local Files (HTML only)
     
@@ -230,6 +232,8 @@ markdown
     ```
     [example_python_function](a-normal-rst-file.rst#example_python_function)
     ```
+    
+    This is especially useful for use with the Sphinx [autodoc](http://www.sphinx-doc.org/ext/autodoc.html) extension!
 metadata
     {
      "kernelspec": {
@@ -247,6 +251,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.4.4"
+      "version": "3.6.3"
      }
     }
