@@ -25,7 +25,9 @@ markdown
     
     [![Packaging status](https://repology.org/badge/vertical-allrepos/python:nbsphinx.svg)](https://repology.org/metapackage/python:nbsphinx)
     
-    You can also install `nbsphinx` with `pip`, Python's own package manager:
+    [![PyPI version](https://badge.fury.io/py/nbsphinx.svg)](https://pypi.python.org/pypi/nbsphinx)
+    
+    On any platform, you can also install `nbsphinx` with `pip`, Python's own package manager:
     
         python3 -m pip install nbsphinx --user
     
