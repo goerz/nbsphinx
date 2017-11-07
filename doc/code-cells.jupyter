@@ -123,7 +123,7 @@ markdown
     
     **Note:**
     
-    jQuery should be available, but using the readthedocs.org default theme, it's not. See [the issue on Github](https://github.com/snide/sphinx_rtd_theme/issues/328).
+    jQuery should be available, but using the readthedocs.org default theme, it's not. See [the issue on Github](https://github.com/rtfd/sphinx_rtd_theme/issues/328).
     Other Sphinx themes are not affected by this.
     
     </div>

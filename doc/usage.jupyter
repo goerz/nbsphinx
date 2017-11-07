@@ -75,7 +75,7 @@ markdown
     
         python3 -m sphinx <source-dir> <build-dir> -b latex
     
-    If you don't know how to create a PDF file from the LaTeX output, you should have a look at [Latexmk](http://users.phys.psu.edu/~collins/software/latexmk-jcc/) (see also [this tutorial](http://mg.readthedocs.io/latexmk.html)).
+    If you don't know how to create a PDF file from the LaTeX output, you should have a look at [Latexmk](http://personal.psu.edu/jcc8//software/latexmk-jcc/) (see also [this tutorial](http://mg.readthedocs.io/latexmk.html)).
     
     Sphinx can automatically check if the links you are using are still valid.
     Just invoke it like this:
@@ -155,7 +155,7 @@ markdown
     
     1. Create the file mentioned above.
     You can choose whatever name you want (it may also live in a subdirectory, e.g. `doc/environment.yml`), it just has to match whatever is specified in `readthedocs.yml`.
-    The second file describes a [conda environment](http://conda.pydata.org/docs/using/envs.html) and should contain something like this:
+    The second file describes a [conda environment](https://conda.io/docs/using/envs.html) and should contain something like this:
     
             channels:
               - conda-forge
@@ -244,7 +244,7 @@ markdown
     
     ### 3rd-Party Themes
     
-    * [sphinx_rtd_theme](https://github.com/snide/sphinx_rtd_theme):
+    * [sphinx_rtd_theme](https://github.com/rtfd/sphinx_rtd_theme):
       [example](http://nbsphinx.readthedocs.io/en/rtd-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/rtd-theme^...rtd-theme)
     

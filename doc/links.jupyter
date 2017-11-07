@@ -21,8 +21,6 @@ markdown
     https://bitbucket.org/yt_analysis/yt-doc/src/default/extensions/notebook_sphinxext.py
     
     https://github.com/matthew-brett/perrin-academy/blob/master/sphinxext/notebook_sphinxext.py
-    
-    https://github.com/ipython/nbconvert/pull/35
 markdown
     **nb2plots**
     
