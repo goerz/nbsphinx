@@ -1,0 +1,65 @@
+nbformat 4
+nbformat_minor 1
+markdown
+    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
+  metadata
+    {
+     "nbsphinx": "hidden"
+    }
+markdown
+    # Prolog and Epilog
+    
+    When including notebooks in your Sphinx documentation, you can choose to add some generic content before and after each notebook.
+    This can be done with the configuration values `nbsphinx_prolog` and `nbsphinx_epilog` in the file `conf.py`.
+    
+    The prolog and epilog strings can hold arbitrary [reST](http://sphinx-doc.org/rest.html) markup.
+    Particularly, the [only](http://www.sphinx-doc.org/en/stable/markup/misc.html#directive-only) and [raw](http://docutils.sourceforge.net/docs/ref/rst/directives.html#raw-data-pass-through) directives can be used to have different content for HTML and LaTeX output.
+    
+    Those strings are also processed by the [Jinja2](http://jinja.pocoo.org/) templating engine.
+    This means you can run Python-like code within those strings.
+    You have access to the current [Sphinx build environment](http://www.sphinx-doc.org/en/stablef/extdev/envapi.html) via the variable `env`.
+    For example, you can get the file name of the current notebook with
+    
+        {{ env.doc2path(env.docname, base=None) }}
+    
+    Have a look at the [Jinja2 template documentation](http://jinja.pocoo.org/docs/latest/templates/) for more information.
+    
+    For an example, see the file [conf.py](conf.py) of the `nbsphinx` documentation.
+    
+    <div class="alert alert-warning">
+    
+    **Warning:**
+    
+    If you use invalid syntax, you might get an error like this:
+    
+        jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+    
+    This is especially prone to happen when using raw LaTeX, with its abundance of braces.
+    To avoid clashing braces you can try to insert additional spaces or LaTeX macros that don't have a visible effect, like e.g. `\strut{}`.
+    For example, you can avoid three consecutive opening braces with something like that:
+    
+        \texttt{\strut{}{{ env.doc2path(env.docname, base=None) }}}
+    
+    NB: The three consecutive closing braces in this example are not problematic.
+    
+    </div>
+metadata
+    {
+     "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+     },
+     "language_info": {
+      "codemirror_mode": {
+       "name": "ipython",
+       "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.6.4rc1"
+     }
+    }
