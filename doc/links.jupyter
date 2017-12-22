@@ -44,6 +44,14 @@ markdown
     
     https://github.com/Chilipp/sphinx-nbexamples
 markdown
+    **nbsphinx-link**
+    
+    https://github.com/vidartf/nbsphinx-include
+    
+    Uses `nbsphinx`, but supports notebooks outside the Sphinx source directory.
+    
+    See https://github.com/spatialaudio/nbsphinx/pull/33 for some limitations.
+markdown
     **DocOnce**
     
     http://hplgit.github.io/doconce/doc/web/index.html
@@ -84,6 +92,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.3"
+      "version": "3.6.4"
      }
     }
