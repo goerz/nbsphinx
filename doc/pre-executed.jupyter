@@ -20,10 +20,6 @@ markdown
     So just do it once -- when you happen to have the time -- and then just keep the output.
 code 1
     import time
-  metadata
-    {
-     "collapsed": true
-    }
 code 2
     %time time.sleep(60 * 60)
     6 * 7
@@ -41,10 +37,6 @@ markdown
     You might have created results with a library that's hard to install and therefore you have only managed to install it on one very old computer in the basement, so you probably cannot run this whenever you build your Sphinx docs.
 code 3
     from a_very_rare_library import calculate_the_answer
-  metadata
-    {
-     "collapsed": true
-    }
 code 4
     calculate_the_answer()
   execute_result
@@ -93,7 +85,7 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.3"
+      "version": "3.6.4"
      },
      "widgets": {
       "state": {},
