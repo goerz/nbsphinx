@@ -22,7 +22,6 @@ code
     answer = 6 * 7
   metadata
     {
-     "collapsed": true,
      "nbsphinx": "hidden"
     }
 markdown
