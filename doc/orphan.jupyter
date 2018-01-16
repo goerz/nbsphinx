@@ -9,7 +9,7 @@ markdown
 markdown
     # An Orphan Notebook (HTML Only)
     
-    This means that is doesn't appear in a [toctree](http://www.sphinx-doc.org/en/stable/markup/toctree.html) (see `index.rst`), but other pages can still link to it ...
+    This means that is doesn't appear in a [toctree](http://www.sphinx-doc.org/markup/toctree.html) (see `index.rst`), but other pages can still link to it ...
     
     * ... from a [Markdown cell of another notebook](markdown-cells.ipynb#Links-to-Other-Notebooks) using
     

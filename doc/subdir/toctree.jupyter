@@ -9,7 +9,7 @@ markdown
 markdown
     # Using `toctree` In A Notebook
     
-    In Sphinx-based documentation, there is typically a file called `index.rst` which contains one or more [toctree](http://www.sphinx-doc.org/en/stable/markup/toctree.html) directives.
+    In Sphinx-based documentation, there is typically a file called `index.rst` which contains one or more [toctree](http://www.sphinx-doc.org/markup/toctree.html) directives.
     Those can be used to pull in further source files (which themselves can contain `toctree` directives).
     
     With `nbsphinx` it is possible to get a similar effect within a Jupyter notebook using the `"nbsphinx-toctree"` cell metadata.
