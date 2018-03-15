@@ -24,6 +24,8 @@ markdown
     
     </div>
     
+    A link to a notebook in the same sub-directory: [link](toctree.ipynb).
+    
     A link to a notebook in the parent directory: [link](../markdown-cells.ipynb).
     
     A link to a local file: [link](../images/notebook_icon.png).
