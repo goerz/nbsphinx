@@ -17,16 +17,10 @@ markdown
         [some link text](notebookname.ipynb)
         ```
     
-    * ... from a [reST page](a-normal-rst-file.rst#Links-to-Notebooks) using
+    * ... from a [reST page](a-normal-rst-file.rst#links-to-notebooks-and-other-sphinx-source-files) using
     
         ```rst
-        :ref:`/notebookname.ipynb`
-        ```
-    
-        or
-    
-        ```rst
-        :ref:`alternative link text </notebookname.ipynb>`
+        `some link text <notebookname.ipynb>`_
         ```
     
     Sphinx raises a warning in case of orphaned documents:
