@@ -9,7 +9,7 @@ markdown
 markdown
     # Using `toctree` In A Notebook
     
-    In Sphinx-based documentation, there is typically a file called `index.rst` which contains one or more [toctree](http://www.sphinx-doc.org/markup/toctree.html) directives.
+    In Sphinx-based documentation, there is typically a file called `index.rst` which contains one or more [toctree](http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree) directives.
     Those can be used to pull in further source files (which themselves can contain `toctree` directives).
     
     With `nbsphinx` it is possible to get a similar effect within a Jupyter notebook using the `"nbsphinx-toctree"` cell metadata.
@@ -52,7 +52,7 @@ markdown
           "numbered": true
         }
     
-    For more options, have a look a the [Sphinx documentation](http://www.sphinx-doc.org/markup/toctree.html).
+    For more options, have a look a the [Sphinx documentation](http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree).
     All options can be used -- except `:glob:`, which can only be used in [rst files](../a-normal-rst-file.rst) and in [raw reST cells](../raw-cells.ipynb#reST).
     
     Note that in the HTML output, a `toctree` cell generates an in-line table of contents (containing links) at its position in the notebook, whereas in the LaTeX output, a new (sub-)section with the actual content is inserted at its position.

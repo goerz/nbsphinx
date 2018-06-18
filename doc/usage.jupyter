@@ -28,14 +28,14 @@ markdown
     exclude_patterns = ['_build', '**.ipynb_checkpoints']
     ```
     
-    Once your `conf.py` is in place, edit the file named `index.rst` and add the file names of your notebooks (with or without the `.ipynb` extension) to the [toctree](http://www.sphinx-doc.org/markup/toctree.html) directive.
+    Once your `conf.py` is in place, edit the file named `index.rst` and add the file names of your notebooks (with or without the `.ipynb` extension) to the [toctree](http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree) directive.
     
     <div class="alert alert-info">
     
     **autosummary bug:**
     
     If you are using the `sphinx.ext.autosummary` Sphinx extension, there is [a bug in Sphinx (below version 1.5)](https://github.com/sphinx-doc/sphinx/issues/2485) which prevents notebooks from being parsed. 
-    As a work-around you can explicitly list all the files for which autosummary should be ran using the  [autosummary_generate](http://www.sphinx-doc.org/ext/autosummary.html#confval-autosummary_generate) variable in `conf.py`.  For example,
+    As a work-around you can explicitly list all the files for which autosummary should be ran using the  [autosummary_generate](http://www.sphinx-doc.org/en/master/ext/autosummary.html#confval-autosummary_generate) variable in `conf.py`.  For example,
     
     ```python
     autosummary_generate = ['myfile1.rst', 'myfile2.rst']
@@ -84,7 +84,7 @@ markdown
 markdown
     ## Watching for Changes with `sphinx-autobuild`
     
-    If you think it's tedious to run the Sphinx build command again and again while you make changes to your notebooks, you'll be happy to hear that there is a way to avoid that: [sphinx-autobuild](https://pypi.python.org/pypi/sphinx-autobuild)!
+    If you think it's tedious to run the Sphinx build command again and again while you make changes to your notebooks, you'll be happy to hear that there is a way to avoid that: [sphinx-autobuild](https://pypi.org/project/sphinx-autobuild)!
     
     It can be installed with
     
@@ -200,7 +200,7 @@ markdown
 markdown
     ## HTML Themes
     
-    The `nbsphinx` extension does *not* provide its own theme, you can use any of the available themes or [create a custom one](http://www.sphinx-doc.org/theming.html#creating-themes), if you feel like it.
+    The `nbsphinx` extension does *not* provide its own theme, you can use any of the available themes or [create a custom one](http://www.sphinx-doc.org/en/master/theming.html#creating-themes), if you feel like it.
     
     The following (incomplete) list of themes contains up to three links for each theme:
     
@@ -260,7 +260,7 @@ markdown
       [example](http://nbsphinx.readthedocs.io/en/py3doc-enhanced-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/py3doc-enhanced-theme^...py3doc-enhanced-theme)
     
-    * [basicstrap](http://pythonhosted.org/sphinxjp.themes.basicstrap/):
+    * [basicstrap](https://pythonhosted.org/sphinxjp.themes.basicstrap/):
       [example](http://nbsphinx.readthedocs.io/en/basicstrap-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/basicstrap-theme^...basicstrap-theme)
     

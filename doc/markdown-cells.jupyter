@@ -195,7 +195,7 @@ markdown
 markdown
     ## Links to `*.rst` Files (and Other Sphinx Source Files)
     
-    Links to files whose extension is in the configuration value [source_suffix](http://www.sphinx-doc.org/config.html#confval-source_suffix), will be converted to links to the generated HTML/LaTeX pages. Example: [A reStructuredText file](a-normal-rst-file.rst).
+    Links to files whose extension is in the configuration value [source_suffix](http://www.sphinx-doc.org/en/master/config.html#confval-source_suffix), will be converted to links to the generated HTML/LaTeX pages. Example: [A reStructuredText file](a-normal-rst-file.rst).
     
     This was created with:
     
@@ -236,7 +236,7 @@ markdown
 markdown
     ## Links to Domain Objects
     
-    Links to [Sphinx domain objects](http://www.sphinx-doc.org/domains.html) (such as a Python class or JavaScript function) are also possible. For example: [example_python_function](a-normal-rst-file.rst#example_python_function).
+    Links to [Sphinx domain objects](http://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html) (such as a Python class or JavaScript function) are also possible. For example: [example_python_function](a-normal-rst-file.rst#example_python_function).
     
     This was created with:
     
@@ -244,7 +244,7 @@ markdown
     [example_python_function](a-normal-rst-file.rst#example_python_function)
     ```
     
-    This is especially useful for use with the Sphinx [autodoc](http://www.sphinx-doc.org/ext/autodoc.html) extension!
+    This is especially useful for use with the Sphinx [autodoc](http://www.sphinx-doc.org/en/master/ext/autodoc.html) extension!
 metadata
     {
      "kernelspec": {

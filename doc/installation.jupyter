@@ -10,7 +10,7 @@ markdown
     # Installation
     
     Note that some packages may be out-of-date.
-    You can always get the newest `nbsphinx` release from [PyPI](https://pypi.python.org/pypi/nbsphinx) (using `pip`).
+    You can always get the newest `nbsphinx` release from [PyPI](https://pypi.org/project/nbsphinx) (using `pip`).
     If you want to try the latest development version, have a look at the file [CONTRIBUTING.rst](https://github.com/spatialaudio/nbsphinx/blob/master/CONTRIBUTING.rst).
     
     ## nbsphinx Packages
@@ -25,7 +25,7 @@ markdown
     
     [![Packaging status](https://repology.org/badge/vertical-allrepos/python:nbsphinx.svg)](https://repology.org/metapackage/python:nbsphinx)
     
-    [![PyPI version](https://badge.fury.io/py/nbsphinx.svg)](https://pypi.python.org/pypi/nbsphinx)
+    [![PyPI version](https://badge.fury.io/py/nbsphinx.svg)](https://pypi.org/project/nbsphinx)
     
     On any platform, you can also install `nbsphinx` with `pip`, Python's own package manager:
     

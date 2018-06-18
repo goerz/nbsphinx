@@ -46,7 +46,7 @@ markdown
 markdown
     **nbsphinx-link**
     
-    https://github.com/vidartf/nbsphinx-include
+    https://github.com/vidartf/nbsphinx-link
     
     Uses `nbsphinx`, but supports notebooks outside the Sphinx source directory.
     
