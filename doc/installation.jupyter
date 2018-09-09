@@ -23,7 +23,7 @@ markdown
     
     If you are using Linux, there are packages available for many distributions.
     
-    [![Packaging status](https://repology.org/badge/vertical-allrepos/python:nbsphinx.svg)](https://repology.org/metapackage/python:nbsphinx)
+    [![Packaging status](https://repology.org/badge/vertical-allrepos/python:nbsphinx.svg)](https://repology.org/metapackage/python:nbsphinx/versions)
     
     [![PyPI version](https://badge.fury.io/py/nbsphinx.svg)](https://pypi.org/project/nbsphinx)
     

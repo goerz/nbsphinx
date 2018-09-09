@@ -1,5 +1,5 @@
 nbformat 4
-nbformat_minor 1
+nbformat_minor 2
 markdown
     This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
   metadata
@@ -74,7 +74,7 @@ markdown
     
     https://github.com/ipython/ipython/issues/4936
     
-    https://mail.scipy.org/pipermail/ipython-user/2013-December/013490.html
+    `https://mail.scipy.org/pipermail/ipython-user/2013-December/013490.html` (not available anymore)
 metadata
     {
      "kernelspec": {
@@ -92,6 +92,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.4"
+      "version": "3.6.6+"
      }
     }
