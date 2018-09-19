@@ -13,7 +13,7 @@ markdown
     
     In the directory with your notebook files, run this command (assuming you have [Sphinx](http://sphinx-doc.org/) installed already):
     
-        python3 -m sphinx.quickstart
+        python3 -m sphinx.cmd.quickstart
     
     Answer the questions that appear on the screen. In case of doubt, just press the `<Return>` key repeatedly to take the default values.
     
