@@ -1,5 +1,5 @@
 nbformat 4
-nbformat_minor 1
+nbformat_minor 2
 markdown
     This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
   metadata
@@ -96,10 +96,13 @@ markdown
     ### Math
 code
     from IPython.display import Math
-    eq = Math(r"\int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)")
+    eq = Math(r'\int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)')
     eq
 code
     display(eq)
+code
+    from IPython.display import Latex
+    Latex(r'This is a \LaTeX{} equation: $a^2 + b^2 = c^2$')
 code
     %%latex
     \begin{equation}
@@ -207,6 +210,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.3"
+      "version": "3.6.7rc1"
      }
     }
