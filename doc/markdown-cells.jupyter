@@ -77,7 +77,7 @@ markdown
     
         ![a stick figure](attachment:stickfigure.png)
     
-    ![a stick figure](attachment:stickfigure.png)
+    This is a cell attachment: ![a stick figure](attachment:stickfigure.png)
     
     In the Jupyter Notebook, there is a speciall "Attachments" cell toolbar which you can use to see all attachments of a cell and delete them, if needed.
   attachment stickfigure.png
