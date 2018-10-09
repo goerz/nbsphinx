@@ -242,6 +242,10 @@ markdown
       [example](http://nbsphinx.readthedocs.io/en/nature-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/nature-theme^...nature-theme)
     
+    * `scrolls`:
+      [example](http://nbsphinx.readthedocs.io/en/scrolls-theme/),
+      [usage](https://github.com/spatialaudio/nbsphinx/compare/scrolls-theme^...scrolls-theme)
+    
     ### 3rd-Party Themes
     
     * [sphinx_rtd_theme](https://github.com/rtfd/sphinx_rtd_theme):
