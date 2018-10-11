@@ -9,6 +9,17 @@ markdown
 markdown
     # External Links
 markdown
+    **nbconvert**
+    
+    The official conversion tool of the Jupyter project.
+    It can be used to convert notebooks to HTML, LaTeX and many other formats.
+    
+    Its `--execute` flag can be used to automatically execute notebooks before conversion.
+    
+    https://nbconvert.readthedocs.io/
+    
+    https://github.com/jupyter/nbconvert
+markdown
     **notebook_sphinxext.py**
     
     Notebooks can be included in `*.rst` files with a custom `notebook` directive.
@@ -21,6 +32,12 @@ markdown
     https://bitbucket.org/yt_analysis/yt-doc/src/default/extensions/notebook_sphinxext.py
     
     https://github.com/matthew-brett/perrin-academy/blob/master/sphinxext/notebook_sphinxext.py
+markdown
+    **nb_pdf_template**
+    
+    An extended `nbconvert` template for LaTeX output.
+    
+    https://github.com/t-makaro/nb_pdf_template
 markdown
     **nb2plots**
     
@@ -92,6 +109,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.6+"
+      "version": "3.6.7rc1"
      }
     }
