@@ -109,6 +109,19 @@ code
     \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
     \end{equation}
 markdown
+    ### Plots
+    
+    You can specify the output formats for `matplotlib` plots. Use something like this in your `conf.py` file:
+    
+        nbsphinx_execute_arguments = ['--InlineBackend.figure_formats={"svg", "pdf"}']
+        
+    In this example, SVG is used in the HTML output and PDF is used for LaTeX output.
+code
+    import matplotlib.pyplot as plt
+code
+    fig, ax = plt.subplots()
+    ax.plot([4, 9, 7, 20, 6, 33, 13, 23, 16, 62, 8]);
+markdown
     ### YouTube Videos
 code
     from IPython.display import YouTubeVideo
