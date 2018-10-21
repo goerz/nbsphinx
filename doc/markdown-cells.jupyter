@@ -1,5 +1,5 @@
 nbformat 4
-nbformat_minor 1
+nbformat_minor 2
 markdown
     This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
   metadata
@@ -61,13 +61,31 @@ markdown
 markdown
     ## Images
     
-    PNG file (local): ![Jupyter notebook icon](images/notebook_icon.png)
+    Local image: ![Jupyter notebook icon](images/notebook_icon.png)
     
-    SVG file (local): ![Python logo](images/python_logo.svg)
+    Remote image: ![Python logo (remote)](https://www.python.org/static/img/python-logo-large.png)
     
-    PNG file (remote): ![Python logo (remote)](https://www.python.org/static/img/python-logo-large.png)
+    ### SVG support for LaTeX
     
-    SVG file (remote): ![Jupyter logo (remote)](http://jupyter.org/assets/nav_logo.svg)
+    LaTeX doesn't support SVG images, but there are Sphinx extensions that can be used for automatically converting SVG images for inclusion in LaTeX output.
+    
+    Just include one of the following options in the list of `extensions`
+    in your `conf.py` file.
+    
+    * `'sphinxcontrib.inkscapeconverter'` or `'sphinxcontrib.rsvgconverter'`:
+      See https://github.com/missinglinkelectronics/sphinxcontrib-svg2pdfconverter
+      for installation instructions.
+      
+      The external programs `inkscape` or `rsvg-convert` (Debian/Ubuntu package `librsvg2-bin`)
+      are needed, respectively.
+    
+    * `'sphinx.ext.imgconverter'`:
+      This is a built-in Sphinx extension, see
+      http://www.sphinx-doc.org/en/master/usage/extensions/imgconverter.html.
+      
+      This needs the external program `convert` from *ImageMagick*.
+    
+      The disadvantage of this extension is that SVGs are converted to bitmap images.
 markdown
     ## Cell Attachments
     
@@ -277,6 +295,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.4"
+      "version": "3.6.7"
      }
     }

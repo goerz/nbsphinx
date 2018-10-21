@@ -69,17 +69,14 @@ code
     from IPython.display import display
 markdown
     ### Local Image Files
+    
+    See also [SVG support for LaTeX](markdown-cells.ipynb#SVG-support-for-LaTeX).
 code
     from IPython.display import Image
     i = Image(filename='images/notebook_icon.png')
     i
 code
     display(i)
-markdown
-    For some reason this doesn't work with `Image(...)`:
-code
-    from IPython.display import SVG
-    SVG(filename='images/python_logo.svg')
 markdown
     ### Image URLs
 code
@@ -88,10 +85,6 @@ code
     Image(url='https://www.python.org/static/img/python-logo-large.png', embed=True)
 code
     Image(url='http://jupyter.org/assets/nav_logo.svg')
-code
-    Image(url='https://www.python.org/static/favicon.ico')
-code
-    Image(url='http://python.org/images/python-logo.gif')
 markdown
     ### Math
 code
@@ -223,6 +216,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.7rc1"
+      "version": "3.6.7"
      }
     }
