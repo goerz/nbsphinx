@@ -81,18 +81,29 @@ markdown
     You can also use separate content for HTML and LaTeX output, e.g.:
     
     ```python
-    nbsphinx_prolog = """
+    nbsphinx_prolog = r"""
     {% set docname = env.doc2path(env.docname, base=None) %}
     
     .. only:: html
     
         Go there: https://example.org/notebooks/{{ docname }}
     
-    .. only:: latex
+    .. raw:: latex
     
-        The following section was created from :file:`{{ docname }}`.
+        \nbsphinxstartnotebook{The following section was created from
+        \texttt{\strut{}{{ docname }}}:}
+    """
+    
+    nbsphinx_epilog = r"""
+    .. raw:: latex
+    
+        \nbsphinxstopnotebook{\hfill End of notebook.}
     """
     ```
+    
+    Note the use of the `\nbsphinxstartnotebook` and `\nbsphinxstopnotebook` commands.
+    Those make sure there is not too much space between the "prolog" and the beginning of the notebook and, respectively, between the end of the notebook and the "epilog".
+    They also avoid page breaks, in order for the "prolog"/"epilog" not to end up on the page before/after the notebook.
     
     For a more involved example for different HTML and LaTeX versions, see the file [conf.py](conf.py) of the `nbsphinx` documentation.
 metadata
@@ -112,6 +123,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.7rc1"
+      "version": "3.6.7"
      }
     }
