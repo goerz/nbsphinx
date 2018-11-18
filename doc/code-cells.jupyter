@@ -104,21 +104,73 @@ code
 markdown
     ### Plots
     
-    You can specify the output formats for `matplotlib` plots. Use something like this in your `conf.py` file:
+    The output formats for Matplotlib plots can be customized.
+    You'll need separate settings for the Jupyter Notebook application and for `nbsphinx`.
     
-        nbsphinx_execute_arguments = ['--InlineBackend.figure_formats={"svg", "pdf"}']
+    If you want to use SVG images for Matplotlib plots, add this line to your IPython configuration file in your profile directory
+    (typically `~/.ipython/profile_default/ipython_kernel_config.py`):
+    
+    ```python
+    c.InlineBackend.figure_formats = {'svg'}
+    ```
+    
+    If you want SVG images, but also want nice plots when exporting to LaTeX/PDF, you can select:
+    
+    ```python
+    c.InlineBackend.figure_formats = {'svg', 'pdf'}
+    ```
+    
+    If you want to use the default PNG plots or HiDPI plots using `'retina'`, make sure to set this:
+    
+    ```python
+    c.InlineBackend.rc = {'figure.dpi': 96}
+    ```
+    
+    This is needed because the default `'figure.dpi'` value of 72
+    is only valid for the [Qt Console](https://qtconsole.readthedocs.io/).
+    
+    If you don't know your IPython profile directory, use this command:
+    
+        python3 -m IPython profile locate
+    
+    If you want to make this work on https://mybinder.org/,
+    just create a file with those settings in a file named
+    [.ipython/profile_default/ipython_kernel_config.py](../.ipython/profile_default/ipython_kernel_config.py) in your repository.
+    
+    To get SVG and PDF plots for `nbsphinx`,
+    use something like this in your `conf.py` file:
+    
+    ```python
+    nbsphinx_execute_arguments = [
+        "--InlineBackend.figure_formats={'svg', 'pdf'}",
+        "--InlineBackend.rc={'figure.dpi': 96}",
+    ]
+    ```
         
-    In this example, `nbsphinx` uses an SVG image in the HTML output and a PDF image is used for LaTeX output.
+    In the following example, `nbsphinx` should use an SVG image in the HTML output
+    and a PDF image for LaTeX/PDF output.
 code
     import matplotlib.pyplot as plt
 code
+    plt.rcParams['figure.figsize'] = 6, 3
+code
     fig, ax = plt.subplots()
     ax.plot([4, 9, 7, 20, 6, 33, 13, 23, 16, 62, 8]);
+  metadata
+    {
+     "scrolled": true
+    }
 markdown
     Alternatively, the figure format(s) can also be chosen directly in the notebook
-    (which overrides the setting in `nbsphinx_execute_arguments`):
+    (which overrides the setting in `nbsphinx_execute_arguments` and in the IPython configuration):
 code
-    %config InlineBackend.figure_formats=['png']
+    %config InlineBackend.figure_formats = ['png']
+code
+    fig
+markdown
+    If you want to use PNG images, but with HiDPI resolution, use the special `'retina'` format (which also looks nice in the LaTeX output):
+code
+    %config InlineBackend.figure_formats = ['retina']
 code
     fig
 markdown
