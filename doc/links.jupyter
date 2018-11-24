@@ -81,6 +81,12 @@ markdown
     
     http://sphinx-ipynb.readthedocs.io/
 markdown
+    **Converting reStructuredText to Notebooks**
+    
+    https://github.com/nthiery/rst-to-ipynb
+    
+    https://github.com/QuantEcon/sphinxcontrib-jupyter
+markdown
     **Converting Notebooks to HTML for Blog Posts**
     
     http://dongweiming.github.io/divingintoipynb_nikola/posts/nbconvert.html
@@ -109,6 +115,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.7rc1"
+      "version": "3.6.7"
      }
     }
