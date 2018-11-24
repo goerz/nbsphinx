@@ -152,9 +152,7 @@ markdown
 code
     import matplotlib.pyplot as plt
 code
-    plt.rcParams['figure.figsize'] = 6, 3
-code
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=[6, 3])
     ax.plot([4, 9, 7, 20, 6, 33, 13, 23, 16, 62, 8]);
   metadata
     {
