@@ -1,5 +1,5 @@
 nbformat 4
-nbformat_minor 1
+nbformat_minor 2
 markdown
     This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
   metadata
@@ -16,16 +16,16 @@ markdown
     1. Manually execute the notebook in question and save the results, see [the pre-executed example notebook](pre-executed.ipynb).
     
     2. Allow errors in all notebooks by setting this option in [conf.py](conf.py):
-    ```
-    nbsphinx_allow_errors = True
-    ```
+       ```
+       nbsphinx_allow_errors = True
+       ```
     
     3. Allow errors on a per-notebook basis by adding this to the notebook's JSON metadata:
-    ```json
-    "nbsphinx": {
-      "allow_errors": true
-    },
-    ```
+       ```
+       "nbsphinx": {
+         "allow_errors": true
+       },
+       ```
     
     This very notebook is an example for the last option.
     The results of the following code cells are not stored within the notebook, therefore it is executed during the Sphinx build process.
@@ -57,7 +57,7 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.4"
+      "version": "3.6.7"
      },
      "nbsphinx": {
       "allow_errors": true

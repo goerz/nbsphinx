@@ -1,5 +1,5 @@
 nbformat 4
-nbformat_minor 1
+nbformat_minor 2
 markdown
     This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
   metadata
@@ -29,7 +29,7 @@ markdown
     
     If you want to avoid this warning, you can add this to the notebook's JSON metadata:
     
-    ```json
+    ```
     "nbsphinx": {
       "orphan": true
     },
@@ -61,7 +61,7 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.3"
+      "version": "3.6.7"
      },
      "nbsphinx": {
       "orphan": true
