@@ -75,7 +75,7 @@ markdown
     
         python3 -m sphinx <source-dir> <build-dir> -b latex
     
-    If you don't know how to create a PDF file from the LaTeX output, you should have a look at [Latexmk](http://personal.psu.edu/jcc8//software/latexmk-jcc/) (see also [this tutorial](http://mg.readthedocs.io/latexmk.html)).
+    If you don't know how to create a PDF file from the LaTeX output, you should have a look at [Latexmk](http://personal.psu.edu/jcc8//software/latexmk-jcc/) (see also [this tutorial](https://mg.readthedocs.io/latexmk.html)).
     
     Sphinx can automatically check if the links you are using are still valid.
     Just invoke it like this:
@@ -211,81 +211,81 @@ markdown
     ### Sphinx's Built-In Themes
     
     * [alabaster](https://alabaster.readthedocs.io/):
-      [example](http://nbsphinx.readthedocs.io/en/alabaster-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/alabaster-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/alabaster-theme^...alabaster-theme)
     
     * `pyramid`:
-      [example](http://nbsphinx.readthedocs.io/en/pyramid-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/pyramid-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/pyramid-theme^...pyramid-theme)
     
     * `classic`:
-      [example](http://nbsphinx.readthedocs.io/en/classic-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/classic-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/classic-theme^...classic-theme)
     
     * `bizstyle`:
-      [example](http://nbsphinx.readthedocs.io/en/bizstyle-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/bizstyle-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/bizstyle-theme^...bizstyle-theme)
     
     * `haiku`:
-      [example](http://nbsphinx.readthedocs.io/en/haiku-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/haiku-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/haiku-theme^...haiku-theme)
     
     * `traditional`:
-      [example](http://nbsphinx.readthedocs.io/en/traditional-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/traditional-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/traditional-theme^...traditional-theme)
     
     * `agogo`:
-      [example](http://nbsphinx.readthedocs.io/en/agogo-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/agogo-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/agogo-theme^...agogo-theme)
     
     * `nature`:
-      [example](http://nbsphinx.readthedocs.io/en/nature-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/nature-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/nature-theme^...nature-theme)
     
     * `scrolls`:
-      [example](http://nbsphinx.readthedocs.io/en/scrolls-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/scrolls-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/scrolls-theme^...scrolls-theme)
     
     ### 3rd-Party Themes
     
     * [sphinx_rtd_theme](https://github.com/rtfd/sphinx_rtd_theme):
-      [example](http://nbsphinx.readthedocs.io/en/rtd-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/rtd-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/rtd-theme^...rtd-theme)
     
     * [bootstrap](http://sphinx-bootstrap-theme.readthedocs.io/):
-      [example](http://nbsphinx.readthedocs.io/en/bootstrap-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/bootstrap-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/bootstrap-theme^...bootstrap-theme)
     
     * [cloud](https://pythonhosted.org/cloud_sptheme/):
-      [example](http://nbsphinx.readthedocs.io/en/cloud-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/cloud-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/cloud-theme^...cloud-theme)
     
     * [sphinx_py3doc_enhanced_theme](https://github.com/ionelmc/sphinx-py3doc-enhanced-theme):
-      [example](http://nbsphinx.readthedocs.io/en/py3doc-enhanced-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/py3doc-enhanced-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/py3doc-enhanced-theme^...py3doc-enhanced-theme)
     
     * [basicstrap](https://pythonhosted.org/sphinxjp.themes.basicstrap/):
-      [example](http://nbsphinx.readthedocs.io/en/basicstrap-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/basicstrap-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/basicstrap-theme^...basicstrap-theme)
     
     * [dotted](https://pythonhosted.org/sphinxjp.themes.dotted/):
-      [example](http://nbsphinx.readthedocs.io/en/dotted-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/dotted-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/dotted-theme^...dotted-theme)
     
     * [better](https://sphinx-better-theme.readthedocs.io/):
-      [example](http://nbsphinx.readthedocs.io/en/better-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/better-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/better-theme^...better-theme)
     
     * [guzzle_sphinx_theme](https://github.com/guzzle/guzzle_sphinx_theme):
-      [example](http://nbsphinx.readthedocs.io/en/guzzle-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/guzzle-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/guzzle-theme^...guzzle-theme)
     
     * [julia](https://github.com/JuliaLang/JuliaDoc):
-      [example](http://nbsphinx.readthedocs.io/en/julia-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/julia-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/julia-theme^...julia-theme)
     
     * [jupyter](https://github.com/jupyter/jupyter-sphinx-theme/):
-      [example](http://nbsphinx.readthedocs.io/en/jupyter-theme/),
+      [example](https://nbsphinx.readthedocs.io/en/jupyter-theme/),
       [usage](https://github.com/spatialaudio/nbsphinx/compare/jupyter-theme^...jupyter-theme)
     
     If you know of another Sphinx theme that should be included here, please open an [issue on Github](https://github.com/spatialaudio/nbsphinx/issues).

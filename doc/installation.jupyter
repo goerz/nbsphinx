@@ -114,7 +114,7 @@ markdown
     
     ### Jupyter Kernel
     
-    If you want to execute your notebooks during the Sphinx build process (see [Controlling Notebook Execution](executing-notebooks.ipynb)), you need an appropriate [Jupyter kernel](http://jupyter.readthedocs.io/en/latest/projects/kernels.html) installed.
+    If you want to execute your notebooks during the Sphinx build process (see [Controlling Notebook Execution](executing-notebooks.ipynb)), you need an appropriate [Jupyter kernel](https://jupyter.readthedocs.io/en/latest/projects/kernels.html) installed.
     
     For example, if you use Python, you should install the `ipykernel` package, e.g. with
     
