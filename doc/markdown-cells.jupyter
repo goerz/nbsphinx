@@ -23,7 +23,7 @@ markdown
     1. Two
     1. Three
     
-    Arbitrary Unicode characters should be supported, e.g. łαßō.
+    Arbitrary Unicode characters should be supported, e.g. łßō.
     Note, however, that this only works if your HTML browser and your LaTeX processor provide the appropriate fonts.
 markdown
     ## Equations
