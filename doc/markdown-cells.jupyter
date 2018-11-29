@@ -28,19 +28,98 @@ markdown
 markdown
     ## Equations
     
-    Equations can be formatted really nicely, either inline, like $\text{e}^{i\pi} = -1$, or on a separate line, like
+    Inline equations like $\text{e}^{i\pi} = -1$
+    can be created by putting a LaTeX expression between two dollar signs, like this:
+    `$\text{e}^{i\pi} = -1$`.
+markdown
+    <div class="alert alert-info">
     
-    \begin{equation}
-    \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
-    \end{equation}
+    **Note:**
     
-    *Note:* Avoid leading and trailing spaces around math expressions, otherwise errors like the following will occur when Sphinx is running:
+    Avoid leading and trailing spaces around math expressions, otherwise errors like the following will occur when Sphinx is running:
     
         ERROR: Unknown interpreted text role "raw-latex".
     
     See also the [pandoc docs](http://pandoc.org/MANUAL.html#math):
     
     > Anything between two `$` characters will be treated as TeX math. The opening `$` must have a non-space character immediately to its right, while the closing `$` must have a non-space character immediately to its left, and must not be followed immediately by a digit.
+    
+    </div>
+markdown
+    Equations can also be displayed on their own line like this:
+    \begin{equation}
+    \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0).
+    \end{equation}
+    
+    This can be done by simply using one of the LaTeX math environments, like so:
+    
+    ```
+    \begin{equation}
+    \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
+    \end{equation}
+    ```
+markdown
+    ### Automatic Equation Numbering
+    
+    This is not automatically enabled in Jupyter notebooks,
+    but you can install a notebook extension in order to enable equation numbering:
+    https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/equation-numbering/readme.html.
+    
+    Automatic Equation Numbering is enabled on http://nbviewer.jupyter.org/,
+    see e.g. the latest version of this very notebook at the link http://nbviewer.jupyter.org/github/spatialaudio/nbsphinx/blob/master/doc/markdown-cells.ipynb.
+    
+    When using `nbsphinx`, you can use the following `mathjax_config` setting in your `conf.py` file
+    to enable automatic equation numbering in HTML output.
+    In LaTeX output, the equations are numbered by default.
+    
+    ```python
+    mathjax_config = {
+        'TeX': {'equationNumbers': {'autoNumber': 'AMS', 'useLabelIds': True}},
+    }
+    ```
+    
+    You can use `\label{...}` to give a unique label to an equation:
+    
+    \begin{equation}
+    \phi = \frac{1 + \sqrt{5}}{2}
+    \label{golden-mean}
+    \end{equation}
+    
+    ```
+    \begin{equation}
+    \phi = \frac{1 + \sqrt{5}}{2}
+    \label{golden-mean}
+    \end{equation}
+    ```
+    
+    If automatic equation numbering is enabled,
+    you can later reference that equation using its label.
+    You can use `\eqref{golden-mean}` for a reference with parentheses: \eqref{golden-mean},
+    or `\ref{golden-mean}` for a reference without them: \ref{golden-mean}.
+    
+    In HTML output, these equation references only work for equations within a single HTML page.
+    In LaTeX output, equations from other notebooks can be referenced, e.g. \eqref{fibonacci-recurrence}.
+markdown
+    ### Manual Equation Numbering
+    
+    If you prefer to assign equation numbers (or some kind of names) manually,
+    you can do so with `\tag{...}`:
+    
+    \begin{equation}
+    a^2 + b^2 = c^2
+    \tag{99.4}
+    \label{pythagoras}
+    \end{equation}
+    
+    ```
+    \begin{equation}
+    a^2 + b^2 = c^2
+    \tag{99.4}
+    \label{pythagoras}
+    \end{equation}
+    ```
+    
+    The above equation has the number \ref{pythagoras}.
 markdown
     ## Code
     
