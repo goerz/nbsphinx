@@ -121,6 +121,31 @@ markdown
     
     The above equation has the number \ref{pythagoras}.
 markdown
+    ## Citations
+    
+    According to https://nbconvert.readthedocs.io/en/latest/latex_citations.html,
+    `nbconvert` supports citations using a special HTML-based syntax.
+    `nbsphinx` supports the same syntax.
+    
+    Example: <cite data-cite="kluyver2016jupyter">Kluyver et al. (2016)</cite>.
+    
+    ```html
+    <cite data-cite="kluyver2016jupyter">Kluyver et al. (2016)</cite>
+    ```
+    
+    You don't actually have to use `<cite>`,
+    any inline HTML tag can be used, e.g. `<strong>`:
+    <strong data-cite="perez2011python">Python: An Ecosystem for Scientific Computing</strong>.
+    
+    ```html
+    <strong data-cite="perez2011python">Python: An Ecosystem for Scientific Computing</strong>
+    ```
+    
+    You'll also have to define a list of references,
+    see [the section about references](a-normal-rst-file.rst#references).
+    
+    There is also a Notebook extension which may or may not be useful: https://github.com/takluyver/cite2c.
+markdown
     ## Code
     
     We can also write code with nice syntax highlighting:
@@ -374,6 +399,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.7"
+      "version": "3.7.1"
      }
     }
