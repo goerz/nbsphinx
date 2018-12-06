@@ -134,7 +134,6 @@ markdown
     
     1. Create a file named `requirements.txt` (or whatever name you wish) in your repository containing the required pip packages:
     
-            sphinx>=1.4
             ipykernel
             nbsphinx
             
@@ -161,7 +160,6 @@ markdown
               - conda-forge
             dependencies:
               - python==3.5
-              - sphinx>=1.4
               - pandoc
               - nbconvert
               - ipykernel
