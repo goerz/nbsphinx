@@ -33,6 +33,14 @@ markdown
     
     https://github.com/matthew-brett/perrin-academy/blob/master/sphinxext/notebook_sphinxext.py
 markdown
+    **ipypublish**
+    
+    A workflow for creating and editing publication ready scientific reports and presentations, from one or more Jupyter Notebooks, without leaving the browser!
+    
+    https://ipypublish.readthedocs.io/
+    
+    https://github.com/chrisjsewell/ipypublish
+markdown
     **nb_pdf_template**
     
     An extended `nbconvert` template for LaTeX output.
