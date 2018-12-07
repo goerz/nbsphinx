@@ -1,6 +1,12 @@
 nbformat 4
 nbformat_minor 2
 markdown
+    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
+  metadata
+    {
+     "nbsphinx": "hidden"
+    }
+markdown
     # Custom Notebook Formats
     
     By default, Jupyter notebooks are stored in files with the suffix `.ipynb`,
