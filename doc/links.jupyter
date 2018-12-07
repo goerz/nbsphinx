@@ -69,6 +69,13 @@ markdown
     
     See https://github.com/spatialaudio/nbsphinx/pull/33 for some limitations.
 markdown
+    **bookbook**
+    
+    Uses `nbconvert` to create a sequence of HTML or
+    a concatenated LaTeX file from a sequence of notebooks.
+    
+    https://github.com/takluyver/bookbook
+markdown
     **DocOnce**
     
     http://hplgit.github.io/doconce/doc/web/index.html
@@ -115,6 +122,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.7"
+      "version": "3.7.1"
      }
     }
