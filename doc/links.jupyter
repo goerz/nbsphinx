@@ -1,7 +1,7 @@
 nbformat 4
 nbformat_minor 2
 markdown
-    This notebook is part of the `nbsphinx` documentation: http://nbsphinx.readthedocs.io/.
+    This notebook is part of the `nbsphinx` documentation: https://nbsphinx.readthedocs.io/.
   metadata
     {
      "nbsphinx": "hidden"
@@ -53,11 +53,11 @@ markdown
 markdown
     **Sphinx-Gallery**
     
-    http://sphinx-gallery.readthedocs.io/
+    https://sphinx-gallery.readthedocs.io/
 markdown
     **sphinx-nbexamples**
     
-    http://sphinx-nbexamples.readthedocs.io/
+    https://sphinx-nbexamples.readthedocs.io/
     
     https://github.com/Chilipp/sphinx-nbexamples
 markdown
@@ -79,7 +79,7 @@ markdown
     
     https://gist.github.com/hadim/16e29b5848672e2e497c
     
-    http://sphinx-ipynb.readthedocs.io/
+    https://sphinx-ipynb.readthedocs.io/
 markdown
     **Converting reStructuredText to Notebooks**
     
