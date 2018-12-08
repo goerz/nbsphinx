@@ -65,8 +65,6 @@ markdown
     See [IPython example notebook](https://nbviewer.jupyter.org/github/ipython/ipython/blob/master/examples/IPython Kernel/Rich Output.ipynb).
     
     TODO: tables? e.g. Pandas DataFrame?
-code
-    from IPython.display import display
 markdown
     ### Local Image Files
     
@@ -273,6 +271,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.7"
+      "version": "3.7.1"
      }
     }
