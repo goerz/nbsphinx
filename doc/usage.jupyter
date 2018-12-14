@@ -159,9 +159,10 @@ markdown
             channels:
               - conda-forge
             dependencies:
-              - python==3.5
+              - python>=3
+              - sphinx>=1.6
               - pandoc
-              - nbconvert
+              - nbconvert!=5.4
               - ipykernel
               - pip:
                 - nbsphinx
