@@ -18,7 +18,7 @@ markdown
     Answer the questions that appear on the screen. In case of doubt, just press the `<Return>` key repeatedly to take the default values.
     
     After that, there will be a few brand-new files in the current directory.
-    You'll have to make a few changes to the file named [conf.py](conf.py). You should at least check if those two variables contain the right things:
+    You'll have to make a few changes to the file named `conf.py`. You should at least check if those two variables contain the right things:
     
     ```python
     extensions = [
@@ -28,20 +28,10 @@ markdown
     exclude_patterns = ['_build', '**.ipynb_checkpoints']
     ```
     
+    For an example, see this project's  [conf.py](conf.py) file.
+    
     Once your `conf.py` is in place, edit the file named `index.rst` and add the file names of your notebooks (with or without the `.ipynb` extension) to the [toctree](http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree) directive.
-    
-    <div class="alert alert-info">
-    
-    **autosummary bug:**
-    
-    If you are using the `sphinx.ext.autosummary` Sphinx extension, there is [a bug in Sphinx (below version 1.5)](https://github.com/sphinx-doc/sphinx/issues/2485) which prevents notebooks from being parsed. 
-    As a work-around you can explicitly list all the files for which autosummary should be ran using the  [autosummary_generate](http://www.sphinx-doc.org/en/master/ext/autosummary.html#confval-autosummary_generate) variable in `conf.py`.  For example,
-    
-    ```python
-    autosummary_generate = ['myfile1.rst', 'myfile2.rst']
-    ```
-    
-    </div>
+    For an example, see this project's  [index.rst](index.rst) file.
 markdown
     ## Running Sphinx
     
@@ -110,17 +100,15 @@ markdown
     
     If your PDF viewer isn't opened because of LaTeX build errors, you can use the command line flag `-f` to *force* creating a PDF file.
 markdown
-    ## Automatic Creation of HTML and PDF output on [readthedocs.org](https://readthedocs.org)
+    ## Automatic Creation of HTML and PDF output on readthedocs.org
     
     There are two different methods, both of which are described below.
     
-    In both cases, you'll first have to create an account on https://readthedocs.org/ and connect your Github/Bitbucket account. Instead of connecting, you can also manually add any publicly available Git/Subversion/Mercurial/Bazaar repository.
+    In both cases, you'll first have to create an account on https://readthedocs.org/ and connect your GitLab/Github/Bitbucket account. Instead of connecting, you can also manually add any publicly available Git/Subversion/Mercurial/Bazaar repository.
     
     After doing the steps described below, you only have to "push" to your repository, and the HTML pages and the PDF file of your stuff are automagically created on readthedocs.org. Awesome!
     
     You can even have different versions of your stuff, just use Git tags and branches and select in the readthedocs.org settings (under "Admin", "Versions") which of those should be created.
-    
-    If your new versions are not automatically built, go to the "Settings" of your Github repository, continue to "Integrations & services", and make sure that "ReadTheDocs" is listed and activated in the "Services" section. If not, use "Add service". There is probably a similar thing for Bitbucket and others.
     
     <div class="alert alert-info">
     
@@ -186,6 +174,7 @@ markdown
     **Note:**
     
     Most of the "Advanced Settings" on readthedocs.org will be ignored if you have a `readthedocs.yml` file.
+    In this file you can control all the settings, see https://docs.readthedocs.io/en/latest/yaml-config.html.
     
     </div>
     
@@ -305,6 +294,7 @@ markdown
     
     In the Jupyter Notebook application, you can manually clear all outputs by selecting
     "Cell" $\to$ "All Output" $\to$ "Clear" from the menu.
+    In JupyterLab, the menu items are "Edit" $\to$ "Clear All Outputs".
     
     There are several tools available to remove outputs from multiple files at once without having to open them separately.
     You can even include such a tool as "clean/smudge filters" into your Git workflow, which will strip the output cells automatically whenever a Git command is executed.
@@ -333,6 +323,6 @@ metadata
       "name": "python",
       "nbconvert_exporter": "python",
       "pygments_lexer": "ipython3",
-      "version": "3.6.4+"
+      "version": "3.7.1"
      }
     }

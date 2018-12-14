@@ -9,7 +9,7 @@ markdown
 markdown
     # Installation
     
-    Note that some packages may be out-of-date.
+    Note that some packages may be out of date.
     You can always get the newest `nbsphinx` release from [PyPI](https://pypi.org/project/nbsphinx) (using `pip`).
     If you want to try the latest development version, have a look at the file [CONTRIBUTING.rst](https://github.com/spatialaudio/nbsphinx/blob/master/CONTRIBUTING.rst).
     

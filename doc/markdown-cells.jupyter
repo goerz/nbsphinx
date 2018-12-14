@@ -48,14 +48,14 @@ markdown
 markdown
     Equations can also be displayed on their own line like this:
     \begin{equation}
-    \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0).
+    \int\limits_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0).
     \end{equation}
     
     This can be done by simply using one of the LaTeX math environments, like so:
     
     ```
     \begin{equation}
-    \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
+    \int\limits_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
     \end{equation}
     ```
 markdown
@@ -358,7 +358,7 @@ markdown
     
     </div>
 markdown
-    ## Links to Local Files (HTML only)
+    ## Links to Local Files
     
     Links to local files (other than Jupyter notebooks and other Sphinx source files) are also possible, e.g. [requirements.txt](requirements.txt).
     
@@ -369,16 +369,18 @@ markdown
     ```
     
     The linked files are automatically copied to the HTML output directory.
-    For LaTeX output, no link is created.
+    For LaTeX output, links are created,
+    but the files are not copied to the target directory.
 markdown
     ## Links to Domain Objects
     
-    Links to [Sphinx domain objects](http://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html) (such as a Python class or JavaScript function) are also possible. For example: [example_python_function](a-normal-rst-file.rst#example_python_function).
+    Links to [Sphinx domain objects](http://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html) (such as a Python class or JavaScript function) are also possible. For example:
+    [example_python_function()](a-normal-rst-file.rst#example_python_function).
     
     This was created with:
     
     ```
-    [example_python_function](a-normal-rst-file.rst#example_python_function)
+    [example_python_function()](a-normal-rst-file.rst#example_python_function)
     ```
     
     This is especially useful for use with the Sphinx [autodoc](http://www.sphinx-doc.org/en/master/ext/autodoc.html) extension!

@@ -50,6 +50,15 @@ code
     print("I'll appear on the standard output stream")
     "I'm the 'normal' output"
 markdown
+    <div class="alert alert-info">
+    
+    **Note:**
+    
+    Using the IPython kernel, the order is actually mixed up,
+    see https://github.com/ipython/ipykernel/issues/280.
+    
+    </div>
+markdown
     ## Cell Magics
     
     IPython can handle code in other languages by means of [cell magics](https://ipython.readthedocs.io/en/stable/interactive/magics.html#cell-magics):
@@ -85,7 +94,7 @@ markdown
     ### Math
 code
     from IPython.display import Math
-    eq = Math(r'\int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)')
+    eq = Math(r'\int\limits_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)')
     eq
 code
     display(eq)
@@ -95,7 +104,7 @@ code
 code
     %%latex
     \begin{equation}
-    \int_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
+    \int\limits_{-\infty}^\infty f(x) \delta(x - x_0) dx = f(x_0)
     \end{equation}
 markdown
     ### Plots
@@ -137,7 +146,7 @@ markdown
     (see the [ipython_kernel_config.py](ipython_kernel_config.py) in this directory),
     or in your profile directory
     (typically `~/.ipython/profile_default/ipython_kernel_config.py`).
-    If you don't know your IPython profile directory, use this command:
+    To find out your IPython profile directory, use this command:
     
         python3 -m IPython profile locate
     
