@@ -5,7 +5,7 @@ matrix:
   include:
 
   # default Python + latest Sphinx + check for broken links
-  - env: ADDITIONAL_COMMAND="python -m sphinx doc/ doc/_build/ -b linkcheck"
+  - env: ADDITIONAL_COMMAND="python -m sphinx doc/ doc/_build/ -W -b linkcheck"
 
   # a few older Sphinx releases using default Python version
   - env: SPHINX="==1.6.3" BIBTEX="==0.4.2"
@@ -38,7 +38,7 @@ install:
   - pip install sphinxcontrib-bibtex$BIBTEX
 script:
   - python -m nbsphinx
-  - python -m sphinx doc/ doc/_build/ -b html
-  - python -m sphinx doc/ doc/_build/ -b latex
-  - python -m sphinx doc/ doc/_build/ -b epub
+  - python -m sphinx doc/ doc/_build/ -W -b html
+  - python -m sphinx doc/ doc/_build/ -W -b latex
+  - python -m sphinx doc/ doc/_build/ -W -b epub
   - $ADDITIONAL_COMMAND
