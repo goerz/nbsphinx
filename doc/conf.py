@@ -145,6 +145,21 @@ except Exception:
 # -- Options for HTML output ----------------------------------------------
 
 html_title = project + ' version ' + release
+html_theme = 'sphinx_typlog_theme'
+html_theme_options = {
+    'logo_name': 'nbsphinx',
+    'description': 'Jupyter Notebooks + Sphinx',
+    'github_user': 'spatialaudio',
+    'github_repo': 'nbsphinx'
+}
+html_sidebars = {
+    '**': [
+        'logo.html',
+        'github.html',
+        'globaltoc.html',
+        'searchbox.html',
+    ]
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
