@@ -145,6 +145,11 @@ except Exception:
 # -- Options for HTML output ----------------------------------------------
 
 html_title = project + ' version ' + release
+html_theme = 'pytorch_sphinx_theme'
+html_theme_options = {
+    'collapse_navigation': False,
+    'pytorch_project': 'tutorials',
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
