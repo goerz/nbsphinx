@@ -146,6 +146,16 @@ except Exception:
 
 html_title = project + ' version ' + release
 
+import itcase_sphinx_theme
+html_theme_path = [itcase_sphinx_theme.get_html_themes_path()]
+html_theme = 'itcase'
+html_theme_options = {
+    'index_menu': True,
+    'github_button': True,
+    'github_user': 'spatialaudio',
+    'github_repo': 'nbsphinx',
+}
+
 # -- Options for LaTeX output ---------------------------------------------
 
 # See https://www.sphinx-doc.org/en/master/latex.html
