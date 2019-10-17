@@ -145,6 +145,19 @@ except Exception:
 # -- Options for HTML output ----------------------------------------------
 
 html_title = project + ' version ' + release
+html_theme = 'pangeo'
+html_theme_options = {
+    #'pangeo_logo': '',
+    'navbar_site_name': 'Contents',
+    'navbar_pagenav_name': 'Page',
+    #'navbar_class': 'navbar',
+}
+html_sidebars = {
+     '**': [
+          'localtoc.html',
+          'searchbox.html',
+     ]
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
