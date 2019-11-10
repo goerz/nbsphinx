@@ -23,7 +23,9 @@
 https://nbsphinx.readthedocs.io/
 
 """
-__version__ = '0.4.3'
+__version__ = '0.4.3+debug'
+
+print("XXX: Imported nbshpinx") # DEBUG
 
 import copy
 import json
@@ -872,10 +874,10 @@ class NotebookParser(rst.Parser):
             lines.append("You can ignore this error by setting the following "
                          "in conf.py:\n\n    nbsphinx_allow_errors = True\n")
             raise NotebookError('\n'.join(lines))
-        except Exception as e:
-            raise NotebookError(type(e).__name__ + ' in ' +
-                                env.doc2path(env.docname, base=None) + ':\n' +
-                                str(e))
+        #except Exception as e:
+        #    raise NotebookError(type(e).__name__ + ' in ' +
+        #                        env.doc2path(env.docname, base=None) + ':\n' +
+        #                        str(e))
 
         rststring = """
 .. role:: nbsphinx-math(raw)
@@ -1158,6 +1160,9 @@ def markdown2rst(text):
 
     input_format = 'markdown'
     input_format += '-implicit_figures'
+    print("XXX ENVIRONMENT") # DEBUG
+    print(subprocess.check_output(['printenv']).decode('utf8')) # DEBUG
+    print(subprocess.check_output(['pandoc', '-v'])) # DEBUG
     v = nbconvert.utils.pandoc.get_pandoc_version()
     if nbconvert.utils.version.check_version(v, '1.13'):
         input_format += '-native_divs+raw_html'
@@ -1192,12 +1197,14 @@ def pandoc(source, fmt, to, filter_func=None):
     cmd2 = cmd + ['--from', 'json', '--to', to]
     cmd2 += ['--columns=500']  # Avoid breaks in tables, see issue #240
 
+    print("XXX cmd1: %s" % " ".join(cmd1)) # DEBUG
     p = subprocess.Popen(cmd1, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     json_data, _ = p.communicate(encode(source))
 
     if filter_func:
         json_data = encode(filter_func(decode(json_data)))
 
+    print("XXX cmd2: %s" % " ".join(cmd2)) # DEBUG
     p = subprocess.Popen(cmd2, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     out, _ = p.communicate(json_data)
     return decode(out).rstrip('\n')
